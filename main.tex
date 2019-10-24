@@ -1,48 +1,56 @@
 \documentclass[a4paper,10pt]{article}
-\renewcommand{\baselinestretch}{0.8}
+\renewcommand{\baselinestretch}{0.8} %spacing between lines
  
-\usepackage[svgnames,table,hyperref]{xcolor}
+\usepackage[svgnames,table,hyperref]{xcolor} %?
  
-\usepackage{titlesec}
-\titlespacing{\section}{0pt}{10pt}{5pt}[0pt]
-\titlespacing{\subsection}{0pt}{10pt}{5pt}[0pt]
+\usepackage{titlesec} %custom title settings
+\titlespacing{\section}{0pt}{5pt}{5pt}[0pt]
+\titlespacing{\subsection}{0pt}{5pt}{5pt}[0pt]
 \titlespacing{\subsubsection}{0pt}{5pt}{2pt}[0pt]
 \titleformat{\section}{\center}{}{0em}{\MakeUppercase}[\titlerule]
 \titleformat{\subsection}{\small}{}{0em}{\MakeUppercase}[\titlerule]
 \titleformat{\subsubsection}{\small}{}{0em}{\MakeUppercase}
 
-\newcommand{\uone}[2]{\colorbox{gray}{\textcolor{white}{\parbox{\linewidth-2.4}{\scshape{\medium\textbf{#1}} }}}\\}
-
-\usepackage[landscape]{geometry}
+\usepackage[landscape]{geometry} %generate geometry of paper
 \geometry{
- total={210mm,297mm},
- left=2mm,
- right=2mm,
- top=15mm,
- bottom=0mm,
+     total={210mm,297mm},
+     left=2mm,
+     right=2mm,
+     top=15mm,
+     bottom=0mm,
  }
 \usepackage[utf8]{inputenc}
 \usepackage[normalem]{ulem}
+
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{amsfonts}
-\usepackage{multicol}
+
 \usepackage{mathtools}
 \usepackage[ngerman]{babel}
 
-\usepackage{enumitem}
+\usepackage{multicol} %multiple columns
+\usepackage{wrapfig} %wrap text around figures
+
+
+\usepackage{enumitem} %get rid of spacing between lists
 \setlist{nolistsep}
 
-\usepackage{fancyhdr}
+\usepackage{fancyhdr} %custom header with title & authors
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{Joshua Näf, \textit{naefjo@ethz.ch}; Franz Bühlmä, \textit{franzbu@ethzch}}
+\rhead{Joshua Näf, \textit{naefjo@ethz.ch}; Franz Bühlmä, \textit{franzbu@ethz.ch}}
 \lhead{\textbf{Dimensionieren 1 HS19 Prof. Dr. Mazza}}
 \setlength{\headsep}{1mm}
+\setlength{\columnseprule}{1px} %thickness of column seperator
 
-\usepackage{graphicx}
+
+\usepackage{graphicx} %imagepackage
 \graphicspath{ {./images/} }
 
+\usepackage{parskip} %Einzug aus, Absatzabstand ein
+\tolerance=2000 %Toleranz für Wortzwischenräume
+\setlength{\emergencystretch}{20pt} %Zusätzliche Zeilendehnbarkeit in Notfällen
 \setlength\parindent{0pt}
 
 
@@ -50,16 +58,18 @@
 \author{Joshua Näf, naefjo@ethz.ch}
 \date{}
 
-\setlength{\columnseprule}{1px}
 
 
 \begin{document}
-\begin{multicols}{3}
+
+\newcommand{\uone}[2]{\colorbox{gray}{\textcolor{white}{\parbox{\linewidth-2.4mm}{\scshape{\normalsize\textbf{#1}} #2}}}\\}
+
+\begin{multicols*}{3}
 
 %\maketitle
-\uone{Methoden d Strukturanalyse}
+\uone{Methoden d Strukturanalyse}{}
 %\section{Methoden d Strukturanalyse}
-    \subsection{Gleichungen des kontinuums:}
+   \subsection{Gleichungen des kontinuums:}
         \subsubsection{GGWB des Kontinuums:}
         \[\sigma_{11,1} + \sigma_{12,2} + \sigma_{13,3} + f_1 = 0\]
         \[\sigma_{21,1} + \sigma_{22,2} + \sigma_{23,3} + f_2 = 0\]
@@ -77,11 +87,12 @@
         \[\epsilon_{22} = u_{22}\quad\quad\quad\quad\epsilon_{13} = \frac{1}{2}(u_{13} + u_{31})\]
         \[\epsilon_{33} = u_{33}\quad\quad\quad\quad\epsilon_{23} = \frac{1}{2}(u_{23} + u_{32})\]
         
-\uone{Balken}
+\uone{Balken}{}
 %\section{Balken}
-    2 Möglichkeiten: Statische Formulierung und Kinematische Formulierung.\\
-    Statische Formulierung: GGB \& SG erfüllt, KR zum Teil nicht. Generell zu weich.\\
-    Kinematische Formulierung: GGB \& SG nicht erfüllt, KR schon. Steifer als echt. Schlechte approx mit nur einer Funktion. Approximation wird besser durch besseren Ansatz und mehrere Elemente.
+    \subsection{Formulierungen:}
+        2 Möglichkeiten: Statische Formulierung und Kinematische Formulierung.\\
+        Statische Formulierung: GGB \& SG erfüllt, KR zum Teil nicht. Generell zu weich.\\
+        Kinematische Formulierung: GGB \& SG nicht erfüllt, KR schon. Steifer als echt. Schlechte approx mit nur einer Funktion. Approximation wird besser durch besseren Ansatz und mehrere Elemente.
     \subsection{Energiesätze:}
         \subsubsection{Definitionen:}
             \begin{itemize}
@@ -127,11 +138,14 @@
             Minimum $E_p:$ $\frac{\partial E_p}{\partial u_i^\kappa}=0$ mit $i=1,2$ \& $\kappa=A,B,C$ (6Gl)\\
             Bsp: $\frac{\partial E_p}{\partial u_1^A}=\frac{\partial U}{\partial u_1^A}+\frac{\partial V}{\partial u_1^A}$ (lin. Fkt. in $u_1^A,..,u_2^C$) \\$\Rightarrow F_1=\kappa_{11}u_1^A+...+\kappa_{16}u_2^c$; $\kappa_{11},...,\kappa_{16}$: 1. Zeile von $\{K\}$
 
-\uone{Scheibe}
+\uone{Scheibe}{}
 %\section{Scheibe}
     \subsection{Definition:}
+        \begin{wrapfigure}[7]{r}{0.5\linewidth}
+        \includegraphics[width=\linewidth]{Balkenelement.jpeg}
+        \end{wrapfigure}
         Scheibenelement: Dünnwandige Struktur mit Belastung in der Ebene. Äussere Kräfte dargestellt durch $N_x,N_y,N_{xy},N_{yx}$: Kräfte pro Längeneinheit ($\rightarrow$ Spannungen $\sigma_{xx},\sigma_{yy},\tau_{xy}$ über Dicke t integriert).
-        \includegraphics[width=50mm]{Balkenelement.jpeg}
+        
     \subsection{Annahmen:}
         \begin{enumerate}[noitemsep]
             \item Ebener Spannungszustand ($\sigma_{zz},\tau_{xz},\tau_{yz}=0$)
@@ -152,7 +166,7 @@
     \subsection{Scheibe mit Riss:}
         \includegraphics[width=80mm]{Scheiberiss}
         
-\uone{Materialverhalten}
+\uone{Materialverhalten}{}
 %\section{Materialverhalten}
     \subsection{Festigkeitshypothesen:}
         \subsubsection{Fliessbedingung:}
@@ -166,5 +180,5 @@
             Konservativer als von Mises'sche Vergleichsspannung (Grenzfläche von Sechseck schneller erreicht als von Ellipse).
             \[\frac{1}{2}Max(|\sigma_1-\sigma_2|,|\sigma_2-\sigma_3|,|\sigma_3-\sigma_1|)=\tau_0=\frac{\sigma_0}{2}\]
 
-\end{multicols}
+\end{multicols*}
 \end{document}
