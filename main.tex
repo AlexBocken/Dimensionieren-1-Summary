@@ -2,11 +2,11 @@
 \renewcommand{\baselinestretch}{0.8} %spacing between lines
  
 \usepackage[svgnames,table,hyperref]{xcolor} %colour package
-\definecolor{mydblue}{RGB}{7, 30, 34}
-\definecolor{mylblue}{RGB}{29, 120, 116}
-\definecolor{mygblue}{RGB}{103, 146, 137}
+\definecolor{seccol}{RGB}{7, 61, 50}
+\definecolor{subseccol}{RGB}{29, 120, 116}
+\definecolor{subsubseccol}{RGB}{103, 146, 137}
 
-
+\usepackage{verbatim} %multiline comments
  
 \usepackage{titlesec} %custom title settings
 \titlespacing{\section}{0pt}{5pt}{5pt}[0pt]
@@ -44,8 +44,8 @@
 \usepackage{fancyhdr} %custom header with title & authors
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{Joshua Näf, \textit{naefjo@ethz.ch}; Franz Bühlmä, \textit{franzbu@ethz.ch}}
-\lhead{\textbf{Dimensionieren 1 HS19 Prof. Dr. Mazza}}
+\rhead{Joshua Näf, \textit{naefjo@ethz.ch}; Franz Bühlmann, \textit{franzbu@ethz.ch}}
+\lhead{\textbf{Dimensionieren I HS19 Prof. Dr. Mazza}}
 \setlength{\headsep}{1mm}
 \setlength{\columnseprule}{1px} %thickness of column seperator
 
@@ -58,29 +58,28 @@
 \setlength{\emergencystretch}{20pt} %Zusätzliche Zeilendehnbarkeit in Notfällen
 \setlength\parindent{0pt}
 
-
-\title{Dimensionieren 1 Zusammenfassung\vspace{-2ex}}
+\begin{comment}
+\title{Dimensionieren 1 Zusammenfassung}
 \author{Joshua Näf, naefjo@ethz.ch}
 \date{}
-
+\end{comment}
 
 
 \begin{document}
 
-\newcommand{\mysec}[1]{\colorbox{mydblue}{\textcolor{white}{\parbox{\linewidth-2.4mm}{\scshape{\Large\textbf{#1}} }}}}
-\newcommand{\mysubsec}[1]{\colorbox{mylblue}{\textcolor{white}{\\\scshape{\normalsize\textbf{#1}}}}\\}
-\newcommand{\mysubsubsec}[1]{\colorbox{mygblue}{\textcolor{white}{\scshape{\footnotesize\textbf{#1}}}}\\}
+\newcommand{\mysec}[1]{\colorbox{seccol}{\textcolor{white}{\parbox{\linewidth-2.4mm}{\scshape{\large\textbf{#1}} }}}}
+\newcommand{\mysubsec}[1]{\colorbox{subseccol}{\textcolor{white}{\scshape{\normalsize\textbf{#1}}}}\\}
+\newcommand{\mysubsubsec}[1]{\colorbox{subsubseccol}{\textcolor{white}{\scshape{\footnotesize\textbf{#1}}}}\\}
 
 \begin{multicols*}{3}
 
-%\maketitle
 \mysec{Methoden d Strukturanalyse}
-%\section{Methoden d Strukturanalyse}
-   \mysubsec{Gleichungen des kontinuums:}
+    \mysubsec{Gleichungen des kontinuums:}
         \mysubsubsec{GGWB des Kontinuums:}
             \[\sigma_{11,1} + \sigma_{12,2} + \sigma_{13,3} + f_1 = 0\]
             \[\sigma_{21,1} + \sigma_{22,2} + \sigma_{23,3} + f_2 = 0\]
             \[\sigma_{31,1} + \sigma_{32,2} + \sigma_{33,3} + f_3 = 0\]
+            
         \mysubsubsec{Stoffgleichungen (SG):}
             \small\[\epsilon_{11} = \frac{1}{E}\lbrack\sigma_{11} - \nu(\sigma_{22} + \sigma_{33})\rbrack \quad \sigma_{11}=\frac{E}{1+\nu}\lbrack\epsilon_{11}+\frac{\nu}{1-2\nu}(\epsilon_{11}+\epsilon_{22}+\epsilon_{33})\rbrack\]
             \[\epsilon_{22} = \frac{1}{E}\lbrack\sigma_{22} - \nu(\sigma_{11} + \sigma_{33})\rbrack \quad \sigma_{22}=\frac{E}{1+\nu}\lbrack\epsilon_{22}+\frac{\nu}{1-2\nu}(\epsilon_{11}+\epsilon_{22}+\epsilon_{33})\rbrack\]
@@ -89,18 +88,19 @@
             %\[\sigma_{22}=\frac{E}{1+\nu}\lbrack\epsilon_{22}+\frac{\nu}{1-2\nu}(\epsilon_{11}+\epsilon_{22}+\epsilon_{33})\rbrack\]
             %\[\sigma_{33}=\frac{E}{1+\nu}\lbrack\epsilon_{33}+\frac{\nu}{1-2\nu}(\epsilon_{11}+\epsilon_{22}+\epsilon_{33})\rbrack\]
             \[\epsilon_{12}=\frac{\tau_{12}}{2G}; \quad 2G=\frac{E}{1+\nu}\]
+            
         \mysubsubsec{Kinematische Randbedingungen (KR):}
             \[\epsilon_{11} = u_{11}\quad\quad\quad\quad\epsilon_{12} = \frac{1}{2}(u_{12} + u_{21})\]
             \[\epsilon_{22} = u_{22}\quad\quad\quad\quad\epsilon_{13} = \frac{1}{2}(u_{13} + u_{31})\]
             \[\epsilon_{33} = u_{33}\quad\quad\quad\quad\epsilon_{23} = \frac{1}{2}(u_{23} + u_{32})\]
         
 \mysec{Balken}
-%\section{Balken}
-    \mysubsec{Formulierungen:}
-        2 Möglichkeiten: Statische Formulierung und Kinematische Formulierung.\\
-        Statische Formulierung: GGB \& SG erfüllt, KR zum Teil nicht. Generell zu weich.\\
-        Kinematische Formulierung: GGB \& SG nicht erfüllt, KR schon. Steifer als echt. Schlechte approx mit nur einer Funktion. Approximation wird besser durch besseren Ansatz und mehrere Elemente.
-        
+    \begin{comment}
+        \mysubsec{Formulierungen:}
+            2 Möglichkeiten: Statische Formulierung und Kinematische Formulierung.\\
+            Statische Formulierung: GGB \& SG erfüllt, KR zum Teil nicht. Generell zu weich.\\
+            Kinematische Formulierung: GGB \& SG nicht erfüllt, KR schon. Steifer als echt. Schlechte approx mit nur einer Funktion. Approximation wird besser durch besseren Ansatz und mehrere Elemente.
+    \end{comment}
     \mysubsec{Energiesätze:}
         \mysubsubsec{Definitionen:}
             \vspace{-4mm}
@@ -133,14 +133,16 @@
             $V=-P\cdot u_y(x=l)=-P(al^3+bl^2)$\\
             $E_p=6\alpha Il(a^2l2+\frac{b^2}{3}+abl)-P(al^3+bl^2)$
             \[\frac{\partial E_p}{\partial a} = 0 \Rightarrow a=-\frac{P}{6\alpha I};\quad\frac{\partial E_p}{\partial b} = 0 \Rightarrow b=-\frac{P}{2\alpha I}\]
-            \columnbreak
+            %\columnbreak
             
         \mysubsubsec{SMPE \& FEM:}
             \vspace{-2mm}
-            \begin{wrapfigure}[12]{r}{0.6\linewidth}
+            \begin{wrapfigure}[8]{r}{0.5\linewidth}
+                \vspace{-5mm}
                 \includegraphics[width=\linewidth]{Dreieckselement}
             \end{wrapfigure}
             Relation der Verschiebungsfreiheitsgrade der Knoten ($\{u\}$) und äusseren Kräften an den Knoten ($\{F\}$) über die globale Steifigkeitsmatrix ($\{K\}\in\mathbb{R}^{6\times6}$): $\{F\}=\{K\}\{u\}$
+            \columnbreak
             
         \mysubsubsec{Bsp}
             $u_1=ax_1+bx_2+c$; $u_2=dx_1+ex_2+f$\\
@@ -151,7 +153,7 @@
             $\epsilon_{11}=(u_1^B-u_1^A)$; $\epsilon_{22}=(u_2^C-u_2^A)$; $\epsilon_{12}=\frac{1}{2}(u_2^B-u_2^A+u_1^C-u_1^A)$
             $\Rightarrow\sigma_{ij}(u_1^A,...,u_2^C,E,\nu)$\\
             $U=\frac{1}{2}\cdot\frac{1}{2}(\sigma_{11}\cdot\epsilon_{11}+\sigma_{22}\cdot\epsilon_{22}+2\sigma_{12}\cdot\epsilon_{12})\cdot t$ mit Dicke $t$ und Fläche $\frac{1}{2}$.\\
-            $V=-(F_1^A\cdot u_1^A+F_2^A\cdot u_2^A+...+F_2^C\cdot u_2^C$\\
+            $V=-(F_1^A\cdot u_1^A+F_2^A\cdot u_2^A+...+F_2^C\cdot u_2^C)$\\
             $E_p=U+V=E_p(u_1^A,...,u_2^C,E,\nu,t)=\alpha_1(u_1^A)^2+\alpha_2u_1^Au_1^B+ ...-(F_1^Au_1^A+...)$\\
             Minimum $E_p:$ $\frac{\partial E_p}{\partial u_i^\kappa}=0$ mit $i=1,2$ \& $\kappa=A,B,C$ (6Gl)\\
             Bsp: $\frac{\partial E_p}{\partial u_1^A}=\frac{\partial U}{\partial u_1^A}+\frac{\partial V}{\partial u_1^A}$ (lin. Fkt. in $u_1^A,..,u_2^C$) \\$\Rightarrow F_1=\kappa_{11}u_1^A+...+\kappa_{16}u_2^c$; $\kappa_{11},...,\kappa_{16}$: 1. Zeile von $\{K\}$
@@ -181,13 +183,12 @@
                 \item Belastung durch uniforme, einachsige Spannung S in grosser Entfernung vom Loch
             \end{itemize}
             \includegraphics[width=\linewidth]{Scheibeloch}
-            Superposition von mehreren Spannungen \& Spannungsrichtungen möglich. Bei Schubspannungen in Hauptspannungen umwandlen (Mohrscher Kreis).
+            \textbf{Superposition} von mehreren Spannungen \& Spannungsrichtungen möglich. Bei Schubspannungen in Hauptspannungen umwandlen (Mohrscher Kreis).
             
     \mysubsec{Scheibe mit Riss:}
         \includegraphics[width=80mm]{Scheiberiss}
         
 \mysec{Materialverhalten}{}
-%\section{Materialverhalten}
     \mysubsec{Festigkeitshypothesen:}
         \mysubsubsec{Fliessbedingung:}
             Fliessfunktion: $\Phi(\sigma)$\\
@@ -203,6 +204,24 @@
         \mysubsubsec{Tresca'sche Vergleichsspannung:}
             Konservativer als von Mises'sche Vergleichsspannung (Grenzfläche von Sechseck schneller erreicht als von Ellipse).
             \[\frac{1}{2}Max(|\sigma_1-\sigma_2|,|\sigma_2-\sigma_3|,|\sigma_3-\sigma_1|)=\tau_0=\frac{\sigma_0}{2}\]
-
+        
+        \mysubsubsec{Kesselgleichungen:}
+            Für dünnwandige Behälter ($\frac{d}{R} \ll 1$)
+            \[\sigma_{\varphi\varphi} = \frac{R}{d}P = 2\sigma_{zz}; \quad \sigma_{zz} = \frac{R}{2d}P; \quad \sigma_{rr}=0\]
+            
+    \mysubsec{Statische Belastung:}
+        \begin{comment}
+            \mysubsubsec{Kraft- \& Deformationsgesteurete Belastung:}
+            $\frac{\epsilon_b}{\epsilon_0}$ Deformationsgesteurete Belastung. Bsp vorgespannte Schraube, therm Spannungen. Begrenzung weniger konservativ $\sigma\epsilon$-Diagramm gr Dehnung führt zu nur kl Spannungserhöhung).\\ $\frac{\sigma_B}{\sigma_0}$ Kraftgesteuerte Belastung. (Für viele Metalle $\frac{\epsilon_b}{\epsilon_0} \gg \frac{\sigma_B}{\sigma_0}$) Überschreiten $R_{p0.2}$ weniger Reserve.
+        \end{comment}
+        \mysubsubsec{Spannungsverteilung:}
+            Falls homogen: bei Fliessgrenze wird die ganze Struktur plastifiziert.$\rightarrow$ Versagen %bei Erreichen der Fliessgrenze wird es in der ganzen Struktur zur Plastifizierung kommen. 
+              
+            Falls linear: es kommt an lokalen Stellen zu Plastifizierungen $\rightarrow$ Versagen erst bei einer grösseren Belastung.
+        
+        \mysubsubsec{Formfaktoren:}
+            %TODO
+        
+      
 \end{multicols*}
 \end{document}
