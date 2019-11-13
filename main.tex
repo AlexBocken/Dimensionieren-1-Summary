@@ -1,227 +1,26 @@
-\documentclass[a4paper,10pt]{article}
-\renewcommand{\baselinestretch}{0.8} %spacing between lines
- 
-\usepackage[svgnames,table,hyperref]{xcolor} %colour package
-\definecolor{seccol}{RGB}{7, 61, 50}
-\definecolor{subseccol}{RGB}{29, 120, 116}
-\definecolor{subsubseccol}{RGB}{103, 146, 137}
-
-\usepackage{verbatim} %multiline comments
- 
-\usepackage{titlesec} %custom title settings
-\titlespacing{\section}{0pt}{5pt}{5pt}[0pt]
-\titlespacing{\subsection}{0pt}{5pt}{5pt}[0pt]
-\titlespacing{\subsubsection}{0pt}{5pt}{2pt}[0pt]
-\titleformat{\section}{\center}{}{0em}{\MakeUppercase}[\titlerule]
-\titleformat{\subsection}{\small}{}{0em}{\MakeUppercase}[\titlerule]
-\titleformat{\subsubsection}{\small\bfseries}{}{0em}{\MakeUppercase}
-
-\usepackage[landscape]{geometry} %generate geometry of paper
-\geometry{
-     total={210mm,297mm},
-     left=2mm,
-     right=2mm,
-     top=15mm,
-     bottom=0mm,
- }
-\usepackage[utf8]{inputenc}
-\usepackage[normalem]{ulem}
-
-\usepackage{amssymb}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-
-\usepackage{mathtools}
-\usepackage[ngerman]{babel}
-
-\usepackage{multicol} %multiple columns
-\usepackage{wrapfig} %wrap text around figures
-
-
-\usepackage{enumitem} %get rid of spacing between lists
-\setlist{nolistsep}
-
-\usepackage{fancyhdr} %custom header with title & authors
-\pagestyle{fancy}
-\fancyhf{}
-\rhead{Joshua Näf, \textit{naefjo@ethz.ch}; Franz Bühlmann, \textit{franzbu@ethz.ch}}
-\lhead{\textbf{Dimensionieren I HS19 Prof. Dr. Mazza}}
-\setlength{\headsep}{1mm}
-\setlength{\columnseprule}{1px} %thickness of column seperator
-
-
-\usepackage{graphicx} %imagepackage
-\graphicspath{ {./images/} }
-
-\usepackage{parskip} %Einzug aus, Absatzabstand ein
-\tolerance=2000 %Toleranz für Wortzwischenräume
-\setlength{\emergencystretch}{20pt} %Zusätzliche Zeilendehnbarkeit in Notfällen
-\setlength\parindent{0pt}
-
-\begin{comment}
-\title{Dimensionieren 1 Zusammenfassung}
-\author{Joshua Näf, naefjo@ethz.ch}
-\date{}
-\end{comment}
-
+\input{00_setup/setup.tex}
 
 \begin{document}
 
-\newcommand{\mysec}[1]{\colorbox{seccol}{\textcolor{white}{\parbox{\linewidth-2.4mm}{\scshape{\large\textbf{#1}} }}}}
-\newcommand{\mysubsec}[1]{\colorbox{subseccol}{\textcolor{white}{\scshape{\normalsize\textbf{#1}}}}\\}
-\newcommand{\mysubsubsec}[1]{\colorbox{subsubseccol}{\textcolor{white}{\scshape{\footnotesize\textbf{#1}}}}\\}
-
+\maketitle
+\begin{center}
+    This summary has been written based on the Lecture 151-0303-00L  Dimensionieren I by Prof. Dr. Mazza (HS19). There can be no guarantee that this summary will prove viable during the excercises or exam since the lecture has been redesigned from the ground up which resulted in this summary being a work in progress throughtout the semester. There is also no guarantee for completness and/or correctness regarding the content of this summary. Use it at your own discretion.
+\end{center}
+\newpage
 \begin{multicols*}{3}
 
-\mysec{Methoden d Strukturanalyse}
-    \mysubsec{Gleichungen des kontinuums:}
-        \mysubsubsec{GGWB des Kontinuums:}
-            \[\sigma_{11,1} + \sigma_{12,2} + \sigma_{13,3} + f_1 = 0\]
-            \[\sigma_{21,1} + \sigma_{22,2} + \sigma_{23,3} + f_2 = 0\]
-            \[\sigma_{31,1} + \sigma_{32,2} + \sigma_{33,3} + f_3 = 0\]
-            
-        \mysubsubsec{Stoffgleichungen (SG):}
-            \small\[\epsilon_{11} = \frac{1}{E}\lbrack\sigma_{11} - \nu(\sigma_{22} + \sigma_{33})\rbrack \quad \sigma_{11}=\frac{E}{1+\nu}\lbrack\epsilon_{11}+\frac{\nu}{1-2\nu}(\epsilon_{11}+\epsilon_{22}+\epsilon_{33})\rbrack\]
-            \[\epsilon_{22} = \frac{1}{E}\lbrack\sigma_{22} - \nu(\sigma_{11} + \sigma_{33})\rbrack \quad \sigma_{22}=\frac{E}{1+\nu}\lbrack\epsilon_{22}+\frac{\nu}{1-2\nu}(\epsilon_{11}+\epsilon_{22}+\epsilon_{33})\rbrack\]
-            \[\epsilon_{33} = \frac{1}{E}\lbrack\sigma_{33} - \nu(\sigma_{22} + \sigma_{11})\rbrack \quad \sigma_{33}=\frac{E}{1+\nu}\lbrack\epsilon_{33}+\frac{\nu}{1-2\nu}(\epsilon_{11}+\epsilon_{22}+\epsilon_{33})\rbrack\]\normalsize
-            %\[\sigma_{11}=\frac{E}{1+\nu}\lbrack\epsilon_{11}+\frac{\nu}{1-2\nu}(\epsilon_{11}+\epsilon_{22}+\epsilon_{33})\rbrack\]
-            %\[\sigma_{22}=\frac{E}{1+\nu}\lbrack\epsilon_{22}+\frac{\nu}{1-2\nu}(\epsilon_{11}+\epsilon_{22}+\epsilon_{33})\rbrack\]
-            %\[\sigma_{33}=\frac{E}{1+\nu}\lbrack\epsilon_{33}+\frac{\nu}{1-2\nu}(\epsilon_{11}+\epsilon_{22}+\epsilon_{33})\rbrack\]
-            \[\epsilon_{12}=\frac{\tau_{12}}{2G}; \quad 2G=\frac{E}{1+\nu}\]
-            
-        \mysubsubsec{Kinematische Randbedingungen (KR):}
-            \[\epsilon_{11} = u_{11}\quad\quad\quad\quad\epsilon_{12} = \frac{1}{2}(u_{12} + u_{21})\]
-            \[\epsilon_{22} = u_{22}\quad\quad\quad\quad\epsilon_{13} = \frac{1}{2}(u_{13} + u_{31})\]
-            \[\epsilon_{33} = u_{33}\quad\quad\quad\quad\epsilon_{23} = \frac{1}{2}(u_{23} + u_{32})\]
-        
-\mysec{Balken}
-    \begin{comment}
-        \mysubsec{Formulierungen:}
-            2 Möglichkeiten: Statische Formulierung und Kinematische Formulierung.\\
-            Statische Formulierung: GGB \& SG erfüllt, KR zum Teil nicht. Generell zu weich.\\
-            Kinematische Formulierung: GGB \& SG nicht erfüllt, KR schon. Steifer als echt. Schlechte approx mit nur einer Funktion. Approximation wird besser durch besseren Ansatz und mehrere Elemente.
-    \end{comment}
-    \mysubsec{Energiesätze:}
-        \mysubsubsec{Definitionen:}
-            \vspace{-4mm}
-            \begin{itemize}
-                \item Spannungsfeld $\sigma_{ij}(x,y,z)$ zulässig falls: GGB \& \textit{stat} RB erfüllt.
-                \item Verschiebungsfeld $u_i(x,y,z)$ zulässig falls: stetig \& \textit{kin} RB erfüllt (schwächere Bedingung).
-                \item Verschiebungsfeld \& Spannungsfeld verträglich iff SG erfüllt.
-                \item Deformationsenergie: $\displaystyle U=\frac{1}{2}\iiint_V \sigma_{ij}\epsilon_{ij}dV$
-                \item Potential äussere Energie:\\
-                $\displaystyle V=-\iiint_V f_iu_idV-\sum_{a}\underline{F_a}\cdot\underline{u_a}$ 
-                \item Potentielle Energie: $E_p=U+V$
-                \item Komplementäre Deformationsenergie:\\ $U_K=\iiint_V(\oint_0^{\sigma_{ij}}\epsilon_{ij}d\sigma_{ij})dV := U$  (lin. elast.)
-            \end{itemize}
-            
-        \mysubsubsec{Satz vom Minium der potentiellen Energie (SMPE):}
-            Aus der Menge der zulässigen Verschiebungsfelder $u_i^*(x,y,z)$ \& der damit verträglichen Spannungsfelder $\sigma_{ij}^*(x,y,z)$ macht das wirkliche Verschiebungsfeld $u_i(x,y,z)$ $E_P$ minimal. $E_p(u_i) < E_p(u_i^*)$\\\\
-            \textit{Direkte Anwendung:} Ansatz für $u_i(x,y,z,a_\gamma)$, zulässig (stetig, KRB erfüllt). Berchene $\epsilon_{ij}^*$ (aus KR) und verträgliche Spannungen $\sigma_{ij}^*$ (aus SG). $\sigma_{ij}^*$ braucht nicht zulässig zu sein (GGB \& SRB evtl. nicht erfüllt). Berechne $E_p(u_i^*)$ und bestimme $a_\gamma$ mit $\frac{\partial E_p}{\partial a_\gamma}=0$.
-            
-        \mysubsubsec{Satz vom Min. der kompl. Deformationsenergie (SMkDE):}
-            Aus der Menge der zulässigen Spannungsfelder $\sigma_{ij}^*(x,y,z)$ \& damit verträglichen $\epsilon_{ij}^*(x,y,z)$ macht das wirkliche Spannungsfeld $\sigma_{ij}(x,y,z)$ die komplementäre Deformationsenergie $U_K$ minimal. $U_K(\sigma_{ij}) < U_K(\sigma_{ij}^*)$\\\\
-            \textit{Direkte Anwendung:} Ansatz für $\sigma_{ij}^*(x,y,z,a_\gamma)$, zulässig (GGB, SRB erfüllt). Berechne $\epsilon_{ij}^*$ (aus SG), nicht unbedingt zulässig (KR, KRB eventuell nicht erfüllt). Berechne $U_K(\sigma_{ij}^*)$ und bestimme $a_\gamma$ mit $\frac{\partial U}{\partial a_\gamma}=0$.
-            
-        \mysubsubsec{Bsp:}
-            Ansatz:\\
-            $u_y=ax^3+bx^2; u_x=-\frac{du_y}{dx}y= -(3ax^2+2bx)y; u_z = 0$\\
-            KR: $\epsilon_{xx} =(-6ax-2b)y$; $\epsilon_{yy}=\epsilon_{zz}=\epsilon_{xy}=\epsilon_{yz} = \epsilon_{xz}=0$\\
-            SG: $\sigma_{xx} = \alpha(-6ax-3b)y$, $\sigma_{xy}=\sigma_{xz}=\sigma_{yz}=0$\\ $\sigma_{yy}=\sigma_{zz}=2G\frac{\nu}{1-2\nu}(-6ax-2b)y$\\
-            SMPE:\\
-            $U=\frac{1}{2}\int_0^l\int_\frac{-h}{2}^\frac{h}{2}\int_{-\frac{b}{2}}^\frac{b}{2}(\sigma_{xx}\cdot\epsilon_{xx})dzdydx=6\cdot\alpha\cdot I\cdot l(\alpha^2l^2+\frac{b^2}{3}+abl)$\\
-            $V=-P\cdot u_y(x=l)=-P(al^3+bl^2)$\\
-            $E_p=6\alpha Il(a^2l2+\frac{b^2}{3}+abl)-P(al^3+bl^2)$
-            \[\frac{\partial E_p}{\partial a} = 0 \Rightarrow a=-\frac{P}{6\alpha I};\quad\frac{\partial E_p}{\partial b} = 0 \Rightarrow b=-\frac{P}{2\alpha I}\]
-            %\columnbreak
-            
-        \mysubsubsec{SMPE \& FEM:}
-            \vspace{-2mm}
-            \begin{wrapfigure}[8]{r}{0.5\linewidth}
-                \vspace{-5mm}
-                \includegraphics[width=\linewidth]{Dreieckselement}
-            \end{wrapfigure}
-            Relation der Verschiebungsfreiheitsgrade der Knoten ($\{u\}$) und äusseren Kräften an den Knoten ($\{F\}$) über die globale Steifigkeitsmatrix ($\{K\}\in\mathbb{R}^{6\times6}$): $\{F\}=\{K\}\{u\}$
-            \columnbreak
-            
-        \mysubsubsec{Bsp}
-            $u_1=ax_1+bx_2+c$; $u_2=dx_1+ex_2+f$\\
-            $\Rightarrow u_1(x_1=0,x_2=0)=u_1^A$; $u_2(x_1=0,x_2=0)=u_2^A$;...\\
-            $\Rightarrow u_1=(u_1^B-u_1^A)x_1+(u_1^C-u_1^A)x_2+u_1^A$;\\
-            $u_2=(u_2^B-u_2^A)x_1+(u_2^C-u_2^A)x_2+u_2^A$\\
-            KR:\\
-            $\epsilon_{11}=(u_1^B-u_1^A)$; $\epsilon_{22}=(u_2^C-u_2^A)$; $\epsilon_{12}=\frac{1}{2}(u_2^B-u_2^A+u_1^C-u_1^A)$
-            $\Rightarrow\sigma_{ij}(u_1^A,...,u_2^C,E,\nu)$\\
-            $U=\frac{1}{2}\cdot\frac{1}{2}(\sigma_{11}\cdot\epsilon_{11}+\sigma_{22}\cdot\epsilon_{22}+2\sigma_{12}\cdot\epsilon_{12})\cdot t$ mit Dicke $t$ und Fläche $\frac{1}{2}$.\\
-            $V=-(F_1^A\cdot u_1^A+F_2^A\cdot u_2^A+...+F_2^C\cdot u_2^C)$\\
-            $E_p=U+V=E_p(u_1^A,...,u_2^C,E,\nu,t)=\alpha_1(u_1^A)^2+\alpha_2u_1^Au_1^B+ ...-(F_1^Au_1^A+...)$\\
-            Minimum $E_p:$ $\frac{\partial E_p}{\partial u_i^\kappa}=0$ mit $i=1,2$ \& $\kappa=A,B,C$ (6Gl)\\
-            Bsp: $\frac{\partial E_p}{\partial u_1^A}=\frac{\partial U}{\partial u_1^A}+\frac{\partial V}{\partial u_1^A}$ (lin. Fkt. in $u_1^A,..,u_2^C$) \\$\Rightarrow F_1=\kappa_{11}u_1^A+...+\kappa_{16}u_2^c$; $\kappa_{11},...,\kappa_{16}$: 1. Zeile von $\{K\}$
+\input{01_MdSA/MdSA.tex}
 
-\mysec{Scheibe}
-    \mysubsec{Definition:}
-        \vspace{-2mm}
-        \begin{wrapfigure}[7]{r}{0.5\linewidth}
-            \includegraphics[width=\linewidth]{Scheibe}
-        \end{wrapfigure}
-        Scheibenelement: Dünnwandige Struktur mit Belastung in der Ebene. Äussere Kräfte dargestellt durch $N_x,N_y,N_{xy},N_{yx}$: Kräfte pro Längeneinheit ($\rightarrow$ Spannungen $\sigma_{xx},\sigma_{yy},\tau_{xy}$ über Dicke t integriert).
-        
-    \mysubsec{Annahmen:}
-        \vspace{-5mm}
-        \begin{enumerate}[noitemsep]
-            \item Ebener Spannungszustand ($\sigma_{zz},\tau_{xz},\tau_{yz}=0$)
-            \item Übrige Spannungskomponenten sind konstant verteilt in z-Richtung (homogene Spannungsverteilung)
-            \item Keine Volumenkräfte
-        \end{enumerate}
-        1.,2.: Vernünftig, weil planare Dimensionen $\gg$ t \& keine Biegung. GGB reduziert sich zu:
-        \[\sigma_{xx,x} + \tau_{xy,y}=0\quad\quad\sigma_{yy,y} + \tau_{xy,x}=0\]
-        Definiere $F(x,y)$ (ayrische Spannungsfkt) mit $\sigma_{xx}=F_{,yy}$; $\sigma_{yy}=F_{,xx}$; $\tau_{xy}=-F_{,xy}$. Aus Kompatibilitätsbedingung: $\epsilon_{xx,yy}+\epsilon_{yy,xx}=2\epsilon_{xy,xy} \rightarrow \Delta\Delta F=0$ (Bi-potential Gleichung) Funktion F(x,y) so wählen, damit RB erfüllt.
-        
-    \mysubsec{Scheibe mit Loch:}
-            \begin{itemize}
-                \item Lochradius a $\ll$ L
-                \item Belastung durch uniforme, einachsige Spannung S in grosser Entfernung vom Loch
-            \end{itemize}
-            \includegraphics[width=\linewidth]{Scheibeloch}
-            \textbf{Superposition} von mehreren Spannungen \& Spannungsrichtungen möglich. Bei Schubspannungen in Hauptspannungen umwandlen (Mohrscher Kreis).
-            
-    \mysubsec{Scheibe mit Riss:}
-        \includegraphics[width=80mm]{Scheiberiss}
-        
-\mysec{Materialverhalten}{}
-    \mysubsec{Festigkeitshypothesen:}
-        \mysubsubsec{Fliessbedingung:}
-            Fliessfunktion: $\Phi(\sigma)$\\
-            Fliessbedingung: $\Phi(\sigma)<0$ (elastisch), $\Phi(\sigma)=0$ (plastisch)
-            \includegraphics[width=0.45\linewidth]{Verf_ideal_elpl}
-            \includegraphics[width=0.5\linewidth]{Verf_lin_isotr}
-            \includegraphics[width=0.5\linewidth]{Verf_lin_kin}
-            
-        \mysubsubsec{von Mieses'sche Vergleichsspannung:}
-            \[\Phi_{v.Mises}= \sigma_1^2+\sigma_2^2+\sigma_3^2-\sigma_1\sigma_2-\sigma_1\sigma_3-\sigma_2\sigma_3 -\sigma_0^2\quad(=0)\]
-            \[\Leftrightarrow \sigma_{v. Mises}^{vgl}= \sqrt{\sigma_1^2+\sigma_2^2+\sigma_3^2-\sigma_1\sigma_2-\sigma_1\sigma_3-\sigma_2\sigma_3} \quad\textrm(HS)\]
-            
-        \mysubsubsec{Tresca'sche Vergleichsspannung:}
-            Konservativer als von Mises'sche Vergleichsspannung (Grenzfläche von Sechseck schneller erreicht als von Ellipse).
-            \[\frac{1}{2}Max(|\sigma_1-\sigma_2|,|\sigma_2-\sigma_3|,|\sigma_3-\sigma_1|)=\tau_0=\frac{\sigma_0}{2}\]
-        
-        \mysubsubsec{Kesselgleichungen:}
-            Für dünnwandige Behälter ($\frac{d}{R} \ll 1$)
-            \[\sigma_{\varphi\varphi} = \frac{R}{d}P = 2\sigma_{zz}; \quad \sigma_{zz} = \frac{R}{2d}P; \quad \sigma_{rr}=0\]
-            
-    \mysubsec{Statische Belastung:}
-        \begin{comment}
-            \mysubsubsec{Kraft- \& Deformationsgesteurete Belastung:}
-            $\frac{\epsilon_b}{\epsilon_0}$ Deformationsgesteurete Belastung. Bsp vorgespannte Schraube, therm Spannungen. Begrenzung weniger konservativ $\sigma\epsilon$-Diagramm gr Dehnung führt zu nur kl Spannungserhöhung).\\ $\frac{\sigma_B}{\sigma_0}$ Kraftgesteuerte Belastung. (Für viele Metalle $\frac{\epsilon_b}{\epsilon_0} \gg \frac{\sigma_B}{\sigma_0}$) Überschreiten $R_{p0.2}$ weniger Reserve.
-        \end{comment}
-        \mysubsubsec{Spannungsverteilung:}
-            Falls homogen: bei Fliessgrenze wird die ganze Struktur plastifiziert.$\rightarrow$ Versagen %bei Erreichen der Fliessgrenze wird es in der ganzen Struktur zur Plastifizierung kommen. 
-              
-            Falls linear: es kommt an lokalen Stellen zu Plastifizierungen $\rightarrow$ Versagen erst bei einer grösseren Belastung.
-        
-        \mysubsubsec{Formfaktoren:}
-            %TODO
-        
-      
-\end{multicols*}
+\input{02_Balken/Balken.tex}
+
+\input{03_Scheibe/Scheibe.tex}
+
+\input{04_Materialverhalten/Materialverhalten.tex}
+
+\input{05_FKM_Richtlinien/FKM_Richtlinien.tex}
+
+\input{06_zyklische_Belastung/zykl_belastung.tex}
+
+\end{multicols*}     
+
 \end{document}
