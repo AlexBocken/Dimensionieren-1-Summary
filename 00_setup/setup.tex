@@ -1,5 +1,5 @@
 \documentclass[a4paper]{article}
-\renewcommand{\baselinestretch}{0.8} %spacing between lines
+\renewcommand{\baselinestretch}{0.9} %spacing between lines
 
 \usepackage{verbatim} %multiline comments
 
@@ -96,7 +96,7 @@
 			leftright skip = -0.5mm,
 			after skip = 0.5 mm]
 			
-		\small \textbf{#1}
+		\small \textbf{#1:}
 	\end{tcolorbox}
 }
 	
@@ -119,10 +119,10 @@
 			leftright skip = -0.5mm,
 			after skip = 0.5 mm]
 			
-		\small \textbf{#1}
+		\small \textbf{#1:}
 	\end{tcolorbox}
 }
-
+\newcommand{\TODO}[1]{\large\textcolor{red}{\textbf{TODO: #1\\}}\normalsize}
 
 \title{Dimensionieren 1 Zusammenfassung}
 \author{Joshua Näf, Franz Bühlmann}
