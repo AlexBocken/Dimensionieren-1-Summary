@@ -1,2 +1,22 @@
-\section{Ermüdung mit örtlichen Spannungen}
+\section{Ermüdung mit örtlichen Spannungen(FKM Kap. 3)}
     \TODO{}
+    \subsection{Lastkollektive Bilden}
+    Aus elast. FEM Hauptspannungen an den kritischen Stellen bestimmen.
+    aus $\sigma_1(t)-t$ Diagramm Belastungskollektiven einteilen. $\rightarrow \sigma_{1a,1}, \sigma_{1m,1}$; $\sigma_{1a,i}, \sigma_{1m,i}$ bestimmen.
+    \\1. Subskript: Welche HS-Richtung (index tiefer $\rightarrow$ HS höher); 
+    \\2. Subskript: Welches Kollektiv (index tiefer $\rightarrow$ $\sigma_a$ höher)
+    \subsection{Ausnutzungsfaktor für jede HS}
+        Ziel: $a_{\textrm{BK},i} < 1$ mit $\displaystyle a_{\textrm{BK},i} = \frac{\sigma_{i,a,1}}{\sigma_{\textrm{BK}}/J_D}$; \quad $J_D=J_S\cdot J_F \cdot J_G$ 
+        \\Durchführen für alle Hauptspannungen.
+    \subsection{Berechnung von $\sigma_{\textrm{BK}}$}
+        \[\sigma_{\textrm{BK}} = K_{\textrm{BK}} \cdot K_{\textrm{AK}} \cdot \frac{1}{K_{\textrm{WK}}} \cdot \sigma_w \]
+        \subsubsection{Kerben \& Oberflächen}
+            \[K_{\textrm{WK}}=\left(\left[1+\frac{1}{\widetilde{K}_F}\left(\frac{1}{K_R}-1\right)\right]\frac{1}{K_v}\right)\frac{1}{\eta_{\sigma}}\]
+            $\widetilde{K}_F$: Rauheitsfaktor;   $K_R$: Sensitivität auf Rauheit bei Kerben;     $K_v$: Randschichtfaktor;   $\eta_{\sigma}$: Stützzahl aus Kerbwirkung
+        \subsubsection{Einfluss der Mittelspannung $\sigma_m$}
+            \[K_{\textrm{AK},i}=\frac{1}{1+M\frac{\sigma_{m,i}}{\sigma_{a,i}}} \quad\quad\textrm{(aus Haigh-Diagramm)}\]
+        \subsection{Beschränkte Schwingungszahl}
+            Einstufenkollektiv: \[K_{\textrm{BK}}= \frac{\sigma_{a}(N=N_L)}{\sigma_w}\]
+            Allgemein: \[\quad K_{\textrm{BK}}=\left(\frac{A\cdot D_{\textrm{m}}\cdot N_{\textrm{D}}}{\bar{N}}\right)^{1/K}\]
+            \[A = \frac{1}{\frac{n_1}{\bar{N}}\cdot\left(\frac{\sigma_{a,R,1}}{\sigma_{a,1}}\right)^{K}+\frac{n_2}{\bar{N}}\cdot\left(\frac{\sigma_{a,R,2}}{\sigma_{a,1}}\right)^{K}}\quad \sigma_{a,R,i}=\sigma_{a,i}\cdot\frac{K_{\textrm{AK},1}}{K_{\textrm{AK},i}}\]
+            $\bar{N}$: $\Sigma$ Zyklen;  $D_{\textrm{m}}$: Schadensgrenze 

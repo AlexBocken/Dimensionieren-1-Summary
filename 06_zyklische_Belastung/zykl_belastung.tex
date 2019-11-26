@@ -21,7 +21,7 @@
     \subsection{Smith-Diagram}
         
         \includegraphics[width=\linewidth, height= 40mm]{06/smith_diagramm.jpeg}
-    \subsection{Kumulative Ermüdung}
+    \subsection{Kumulative Ermüdung (Miner-Regel)}
         Belastung oft komplexer als 'einstufig' $\rightarrow$ Mehrstufenkollektiv. Belastungsfunktion wird in Abschnitte aufgeteilt.
         \[D_{\textrm{BK}}= \sum_{i}\frac{n_{i}}{N_{\textrm{Zul}}(\Delta\sigma_{i},\sigma_{m,i})} \quad D_{\textrm{BK}}: \frac{\textrm{Schädigung}}{\textrm{Belastungskollektive}} \]
         \[T_{L}=\frac{1}{D_{\textrm{BK}}}\cdot T_{\textrm{BK}} \quad\quad\quad T_{\textrm{BK}}:\frac{\textrm{Belastungszeit}}{\textrm{Belastungskollektive}}\]
@@ -35,7 +35,20 @@
             \[\Delta\varepsilon_K = K_{\varepsilon} \cdot \Delta\textrm{e} \quad\quad \Delta\sigma_K:\textrm{lok. Schwingbreite}\]
             \[\Delta\textrm{e}=\frac{\Delta s}{E} \quad\quad\quad \Delta\varepsilon_K:\textrm{lok. Schwingbreite}\]
     \subsection{Neuber Hyperbel}
-        \TODO{}
+        Möglichkeit zur Abschätzung von Dehnungsamplituden bei lokaler plast. im Kerbgrund.
+        \[\sigma_A^E\cdot\varepsilon_A^E = \sigma_A^P \cdot \varepsilon_A^P\]
+        Neuber setzt voraus, dass:
+        \begin{itemize}
+            \item im Kerbgrund ein einachsiger Spannungszustand besteht.
+            \item $\sigma_a^E$ bekannt ( aus finiten Elementen, oder Kerbfaktor)
+        \end{itemize}
+        \includegraphics[width=\linewidth, height= 45mm]{images/06/Neuber_Hyperbel.jpeg}
+        \[\sigma_a^E = K_T \cdot s; \quad \sigma_a^E = E \cdot \varepsilon_a^E \quad\Rightarrow\quad \varepsilon_a^E = K_T \cdot \frac{s}{E}\]
+        \[\varepsilon_a^P \cdot R_{p_{0.2}}^{zykl.} = K_T^2 \cdot \frac{s^2}{E}; \quad K_{\sigma}=\frac{R_{p_{0.2}}^{zykl.}}{s_a} \quad\Rightarrow\quad K_{\sigma} \cdot K_{\varepsilon} = K_T^2\]
+        Falls ideal plastisches Material: (\bm{$\sigma_a^P = \textrm{\textbf{const.}} = R_e^{zykl.}$})
+        
+        
+             
     \subsection{BSP}
         \TODO{BSP VON SERIE}
     
