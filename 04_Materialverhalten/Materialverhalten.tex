@@ -1,24 +1,17 @@
 \section{Materialverhalten}{}
     \subsection{Festigkeitshypothesen}
-        \subsubsection{Fliessbedingung}
-            Fliessfunktion: $\Phi(\sigma)$\\
+        \subsubsection{Fliessbedingung/Fliessfunktion $\Phi(\sigma)$}
             Fliessbedingung: $\Phi(\sigma)<0$ (elastisch), $\Phi(\sigma)=0$ (plastisch)
             \includegraphics[width=0.45\linewidth]{04/Verf_ideal_elpl}
             \includegraphics[width=0.5\linewidth]{04/Verf_lin_isotr}
             \includegraphics[width=0.5\linewidth]{04/Verf_lin_kin}
-            
         \subsubsection{von Mieses'sche Vergleichsspannung}
+            \vspace{-3mm}
             \[\Phi_{\textrm{v.Mises}}= \sigma_1^2+\sigma_2^2+\sigma_3^2-\sigma_1\sigma_2-\sigma_1\sigma_3-\sigma_2\sigma_3 -\sigma_0^2\quad(=0)\]
             \[\Leftrightarrow \sigma_{\textrm{v. Mises}}^{vgl}= \sqrt{\sigma_1^2+\sigma_2^2+\sigma_3^2-\sigma_1\sigma_2-\sigma_1\sigma_3-\sigma_2\sigma_3} \quad\textrm(HS)\]
-            
         \subsubsection{Tresca'sche Vergleichsspannung}
             Konservativer als von Mises'sche Vergleichsspannung (Grenzfläche von Sechseck schneller erreicht als von Ellipse).
             \[\sigma_{\textrm{Tresca}}^{vgl}=\frac{1}{2}\textrm{max} \left(|\sigma_1-\sigma_2|,|\sigma_2-\sigma_3|,|\sigma_3-\sigma_1| \right) =\tau_0=\frac{\sigma_0}{2}\]
-        
-        \subsection{Kesselgleichungen}
-            Für dünnwandige Behälter ($\frac{d}{R} \ll 1$)
-            \[\sigma_{\varphi\varphi} = \frac{R}{d}P = 2\sigma_{zz}; \quad \sigma_{zz} = \frac{R}{2d}P; \quad \sigma_{rr}=0\]
-            
     \subsection{Statische Belastung}
         \begin{comment}
             \subsubsection{Kraft- \& Deformationsgesteurete Belastung:}
@@ -32,7 +25,9 @@
             \begin{itemize}
                 \item Erste plastifizierung = vollständige Plastifizierung:
             \end{itemize}
-                    \[F_{plast} = \sigma_0\ \cdot A\]
+            \[F_{plast} = \sigma_0\ \cdot A\]
+            
+            \columnbreak
             \textbf{Biegung:}
             \begin{itemize}
                 \item Erste Plastifizierung:
@@ -45,3 +40,7 @@
         \subsubsection{Formfaktoren}
             Zug(homogen): $\frac{F_{versagen}}{F_{plast}}$\\
             Biegung(linear): $\frac{P_{versagen}}{P_{plast}}$ (Reserve, da Plastifizierung linear)
+    \section{Kesselgleichungen}
+        Für dünnwandige Behälter ($\frac{d}{R} \ll 1$)
+        \[\sigma_{\varphi\varphi} = \frac{R}{d}P = 2\sigma_{zz}; \quad \sigma_{zz} = \frac{R}{2d}P; \quad \sigma_{rr}=0\]
+            

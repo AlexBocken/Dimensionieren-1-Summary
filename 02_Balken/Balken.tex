@@ -9,9 +9,9 @@
                 \item Spannungsfeld $\sigma_{ij}(x,y,z)$ zulässig falls: GGB \& \textit{stat} RB erfüllt.
                 \item Verschiebungsfeld $u_i(x,y,z)$ zulässig falls: stetig \& \textit{kin} RB erfüllt (schwächere Bedingung).
                 \item Verschiebungsfeld \& Spannungsfeld verträglich iff SG erfüllt.
-                \item Deformationsenergie: $\displaystyle U=\frac{1}{2}\iiint_V \sigma_{ij}\varepsilon_{ij}dV$
+                \item Deformationsenergie: $U=\frac{1}{2}\iiint_V \sigma_{ij}\cdot\varepsilon_{ij}dV$
                 \item Potential äussere Energie:\\
-                $\displaystyle V=-\iiint_V f_iu_idV-\sum_{a}\underline{F_a}\cdot\underline{u_a}$ 
+                $V=-\iiint_V f_i\cdot u_idV-\sum_{a}\underline{F}_a\cdot\underline{u}_a$
                 \item Potentielle Energie: $E_p=U+V$
                 \item Komplementäre Deformationsenergie:\\ $U_K=\iiint_V(\oint_0^{\sigma_{ij}}\varepsilon_{ij}d\sigma_{ij})dV := U$  (lin. elast.)
             \end{itemize}
@@ -33,23 +33,23 @@
             $U=\frac{1}{2}\int_0^l\int_\frac{-h}{2}^\frac{h}{2}\int_{-\frac{b}{2}}^\frac{b}{2}(\sigma_{xx}\cdot\varepsilon_{xx})dzdydx=6\cdot\alpha\cdot I\cdot l(\alpha^2l^2+\frac{b^2}{3}+abl)$\\
             $V=-P\cdot u_y(x=l)=-P(al^3+bl^2)$\\
             $E_p=6\alpha Il(a^2l2+\frac{b^2}{3}+abl)-P(al^3+bl^2)$
+            \vspace{-3mm}
             \small\[\frac{\partial E_p}{\partial a} = 0 \Rightarrow a=-\frac{P}{6\alpha I};\quad\frac{\partial E_p}{\partial b} = 0 \Rightarrow b=-\frac{P}{2\alpha I}\]\normalsize
-            
+        \vspace{-3mm}    
         \subsubsection{SMPE \& FEM}
+            \begin{wrapfigure}[5]{r}{0.4\linewidth}
+                \vspace{-5mm}
+                \includegraphics[width=\linewidth, height=23mm]{02/Dreieckselement}
+            \end{wrapfigure}
             Relation der Verschiebungsfreiheitsgrade der Knoten ($\{u\}$) und äusseren Kräften an den Knoten ($\{F\}$) über die globale Steifigkeitsmatrix ($\{K\}\in\mathbb{R}^{6\times6}$): $\{F\}=\{K\}\{u\}$
-
+            
         \subsubsection{Bsp}
             $u_1=ax_1+bx_2+c$; $u_2=dx_1+ex_2+f$\\
             $\Rightarrow u_1(x_1=0,x_2=0)=c=u_1^A$; $\quad u_2(x_1=0,x_2=0)=f=u_2^A$;...\\
             $\Rightarrow u_1=(u_1^B-u_1^A)x_1+(u_1^C-u_1^A)x_2+u_1^A$;\\
-            \begin{wrapfigure}[6]{r}{0.4\linewidth}
-                \vspace{-8mm}
-                \includegraphics[width=\linewidth]{02/Dreieckselement}
-            \end{wrapfigure}
-            $u_2=(u_2^B-u_2^A)x_1+(u_2^C-u_2^A)x_2+u_2^A$\\
-            KR:\\
+            \small$u_2=(u_2^B-u_2^A)x_1+(u_2^C-u_2^A)x_2+u_2^A$\normalsize\\
             $\varepsilon_{11}=(u_1^B-u_1^A)$; $\varepsilon_{22}=(u_2^C-u_2^A)$; $\varepsilon_{12}=\frac{1}{2}(u_2^B-u_2^A+u_1^C-u_1^A)$
-            $\Rightarrow\sigma_{ij}(u_1^A,...,u_2^C,E,\nu)$\\
+            $\Rightarrow\sigma_{ij}(u_1^A,...,u_2^C,E,\nu)$ (aus KR)\\
             $U=\frac{1}{2}\cdot\frac{1}{2}(\sigma_{11}\cdot\varepsilon_{11}+\sigma_{22}\cdot\varepsilon_{22}+2\sigma_{12}\cdot\varepsilon_{12})\cdot t$ mit Dicke $t$ und Fläche $\frac{1}{2}$.\\
             $V=-(F_1^A\cdot u_1^A+F_2^A\cdot u_2^A+...+F_2^C\cdot u_2^C)$\\
             $E_p=U+V=E_p(u_1^A,...,u_2^C,E,\nu,t)=\alpha_1(u_1^A)^2+\alpha_2u_1^Au_1^B+ ...-(F_1^Au_1^A+...)$\\
