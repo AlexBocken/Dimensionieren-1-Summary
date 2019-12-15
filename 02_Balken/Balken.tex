@@ -1,8 +1,8 @@
 \section{Balken}
     \subsection{Formulierungen}
-        2 Möglichkeiten: Statische Formulierung und Kinematische Formulierung.\\
-        Statische Formulierung: GGB \& SG erfüllt, KR zum Teil nicht. Generell zu weich.\\
-        Kinematische Formulierung: GGB \& SG nicht erfüllt, KR schon. Steifer als echt. Schlechte approx mit nur einer Funktion. Approximation wird besser durch besseren Ansatz und mehrere Elemente.
+        2 Möglichkeiten: Statische und Kinematische Formulierung.\\
+        \textbf{Statische Formulierung:} GGB \& SG erfüllt, KR zum Teil nicht. Generell zu weich.\\\\
+        \textbf{Kinematische Formulierung:} GGB \& SG nicht erfüllt, KR schon. Steifer als echt. Schlechte approx mit nur einer Funktion. Approximation wird besser durch besseren Ansatz und mehrere Elemente.
     \subsection{Energiesätze}
         \subsubsection{Definitionen}
             \begin{itemize}
@@ -17,11 +17,11 @@
             \end{itemize}
             
         \subsubsection{Satz vom Minium der potentiellen Energie (SMPE)}
-            Aus der Menge der zulässigen Verschiebungsfelder $u_i^*(x,y,z)$ \& der damit verträglichen Spannungsfelder $\sigma_{ij}^*(x,y,z)$ macht das wirkliche Verschiebungsfeld $u_i(x,y,z)$ $E_P$ minimal. $E_p(u_i) < E_p(u_i^*)$\\\\
+            Aus der Menge der zulässigen \textbf{Verschiebungsfelder} $u_i^*(x,y,z)$ \& der damit verträglichen Spannungsfelder $\sigma_{ij}^*(x,y,z)$ macht das wirkliche Verschiebungsfeld $u_i(x,y,z)$ $E_P$ minimal. $E_p(u_i) < E_p(u_i^*)$\\\\
             \textit{Direkte Anwendung:} Ansatz für $u_i(x,y,z,a_\gamma)$, zulässig (stetig, KRB erfüllt). Berchene $\varepsilon_{ij}^*$ (aus KR) und verträgliche Spannungen $\sigma_{ij}^*$ (aus SG). $\sigma_{ij}^*$ braucht nicht zulässig zu sein (GGB \& SRB evtl. nicht erfüllt). Berechne $E_p(u_i^*)$ und bestimme $a_\gamma$ mit $\frac{\partial E_p}{\partial a_\gamma}=0$.
             
         \subsubsection{Satz vom Min. der kompl. Deform-energie (SMkDE)}
-            Aus der Menge der zulässigen Spannungsfelder $\sigma_{ij}^*(x,y,z)$ \& damit verträglichen $\varepsilon_{ij}^*(x,y,z)$ macht das wirkliche Spannungsfeld $\sigma_{ij}(x,y,z)$ die komplementäre Deformationsenergie $U_K$ minimal. $U_K(\sigma_{ij}) < U_K(\sigma_{ij}^*)$\\\\
+            Aus der Menge der zulässigen \textbf{Spannungsfelder} $\sigma_{ij}^*(x,y,z)$ \& damit verträglichen $\varepsilon_{ij}^*(x,y,z)$ macht das wirkliche Spannungsfeld $\sigma_{ij}(x,y,z)$ die komplementäre Deformationsenergie $U_K$ minimal. $U_K(\sigma_{ij}) < U_K(\sigma_{ij}^*)$\\\\
             \textit{Direkte Anwendung:} Ansatz für $\sigma_{ij}^*(x,y,z,a_\gamma)$, zulässig (GGB, SRB erfüllt). Berechne $\varepsilon_{ij}^*$ (aus SG), nicht unbedingt zulässig (KR, KRB eventuell nicht erfüllt). Berechne $U_K(\sigma_{ij}^*)$ und bestimme $a_\gamma$ mit $\frac{\partial U}{\partial a_\gamma}=0$.
             
         \subsubsection{Bsp}
@@ -41,7 +41,7 @@
                 \vspace{-5mm}
                 \includegraphics[width=\linewidth, height=23mm]{02/Dreieckselement}
             \end{wrapfigure}
-            Relation der Verschiebungsfreiheitsgrade der Knoten ($\{u\}$) und äusseren Kräften an den Knoten ($\{F\}$) über die globale Steifigkeitsmatrix ($\{K\}\in\mathbb{R}^{6\times6}$): $\{F\}=\{K\}\{u\}$
+            Relation der Verschiebungsfreiheitsgrade der Knoten ($\{u\}$) und äusseren Kräften an den Knoten ($\{F\}$) über die \textbf{globale Steifigkeitsmatrix} ($\{K\}\in\mathbb{R}^{6\times6}$): $\{F\}=\{K\}\{u\}$
             
         \subsubsection{Bsp}
             $u_1=ax_1+bx_2+c$; $u_2=dx_1+ex_2+f$\\
