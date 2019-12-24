@@ -1,3 +1,4 @@
+\vspace{-1mm}
 \section{Ermüdung mit örtlichen Spannungen(FKM Kap. 3)}
     \subsection{Lastkollektive Bilden}
     Aus elast. FEM Hauptspannungen an den kritischen Stellen bestimmen.
@@ -7,16 +8,18 @@
     \subsection{Ausnutzungsfaktor für jede HS}
         Ziel: $a_{\textrm{BK},i} < 1$ mit $\displaystyle a_{\textrm{BK},i} = \frac{\sigma_{i,a,1}}{\sigma_{\textrm{BK}}/J_D}$; \quad $J_D=J_S\cdot J_F \cdot J_G$ 
         \\Durchführen für alle Hauptspannungen.
+        \[a_{\textrm{ges}}=\sqrt{\frac{1}{2}\left((a_{\textrm{BK}_1}^{*}-a_{\textrm{BK}_2}^{*})^{2}+(a_{\textrm{BK}_2}^{*}-a_{\textrm{BK}_3}^{*})^{2}+(a_{\textrm{BK}_3}^{*}-a_{\textrm{BK}_1}^{*})^{2}\right)}\]
     \subsection{Berechnung von $\sigma_{\textrm{BK}}$}
         \[\sigma_{\textrm{BK}} = K_{\textrm{BK}} \cdot K_{\textrm{AK}} \cdot \frac{1}{K_{\textrm{WK}}} \cdot \sigma_w \]
         \subsubsection{Kerben \& Oberflächen ($\sigma_{WK}\quad2\rightarrow3$)}
             \[K_{\textrm{WK}}=\left(\left[1+\frac{1}{\widetilde{K}_F}\left(\frac{1}{K_R}-1\right)\right]\frac{1}{K_v}\right)\frac{1}{\eta_{\sigma}}\]
             $\widetilde{K}_F$: Rauheitsfaktor;   $K_R$: Sensitivität auf Rauheit bei Kerben;     $K_v$: Randschichtfaktor;   $\eta_{\sigma}$: Stützzahl aus Kerbwirkung
-            \columnbreak
+            %\columnbreak
         \subsubsection{Einfluss der Mittelspannung $\sigma_m$ ($\sigma_{AK}\quad3\rightarrow4$)}
             \[K_{\textrm{AK},i}=\frac{1}{1+M\frac{\sigma_{m,i}}{\sigma_{a,i}}} \qquad\textrm{(aus Haigh-Diagramm)}\]
+        \vspace{-2mm}
         \subsubsection{Beschränkte Schwingungszahl ($\sigma_{BK}\quad4\rightarrow5$)}
             Einstufenkollektiv: $\displaystyle K_{\textrm{BK}}= \frac{\sigma_{a}(N=N_L)}{\sigma_w}$\\
             Allgemein:\qquad\qquad $\displaystyle K_{\textrm{BK}}=\left(\frac{A\cdot D_{\textrm{m}}\cdot N_{\textrm{D}}}{\bar{N}}\right)^{1/K}$
-            \[A = \frac{1}{\frac{n_1}{\bar{N}}\cdot\left(\frac{\sigma_{a,R,1}}{\sigma_{a,1}}\right)^{K}+\frac{n_2}{\bar{N}}\cdot\left(\frac{\sigma_{a,R,2}}{\sigma_{a,1}}\right)^{K}};\quad \sigma_{a,R,i}=\sigma_{a,i}\cdot\frac{K_{\textrm{AK},1}}{K_{\textrm{AK},i}}\]
+            \vspace{-3mm}\[A = \frac{1}{\frac{n_1}{\bar{N}}\cdot\left(\frac{\sigma_{a,R,1}}{\sigma_{a,1}}\right)^{K}+\frac{n_2}{\bar{N}}\cdot\left(\frac{\sigma_{a,R,2}}{\sigma_{a,1}}\right)^{K}};\quad \sigma_{a,R,i}=\sigma_{a,i}\cdot\frac{K_{\textrm{AK},1}}{K_{\textrm{AK},i}}\]
             $\bar{N}$: $\Sigma$ Zyklen; \qquad $D_{\textrm{m}}$: Schadensgrenze

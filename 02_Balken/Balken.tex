@@ -17,11 +17,11 @@
             \end{itemize}
             
         \subsubsection{Satz vom Minium der potentiellen Energie (SMPE)}
-            Aus der Menge der zulässigen \textbf{Verschiebungsfelder} $u_i^*(x,y,z)$ \& der damit verträglichen Spannungsfelder $\sigma_{ij}^*(x,y,z)$ macht das wirkliche Verschiebungsfeld $u_i(x,y,z)$ $E_P$ minimal. $E_p(u_i) < E_p(u_i^*)$\\\\
+            Aus der Menge der zulässigen \textbf{Verschiebungsfelder} $u_i^*(x,y,z)$ \& der damit verträglichen Spannungsfelder $\sigma_{ij}^*(x,y,z)$ macht das wirkliche Verschiebungsfeld $u_i(x,y,z)$ $E_P$ minimal. $E_p(u_i) < E_p(u_i^*)$\\
             \textit{Direkte Anwendung:} Ansatz für $u_i(x,y,z,a_\gamma)$, zulässig (stetig, KRB erfüllt). Berchene $\varepsilon_{ij}^*$ (aus KR) und verträgliche Spannungen $\sigma_{ij}^*$ (aus SG). $\sigma_{ij}^*$ braucht nicht zulässig zu sein (GGB \& SRB evtl. nicht erfüllt). Berechne $E_p(u_i^*)$ und bestimme $a_\gamma$ mit $\frac{\partial E_p}{\partial a_\gamma}=0$.
             
         \subsubsection{Satz vom Min. der kompl. Deform-energie (SMkDE)}
-            Aus der Menge der zulässigen \textbf{Spannungsfelder} $\sigma_{ij}^*(x,y,z)$ \& damit verträglichen $\varepsilon_{ij}^*(x,y,z)$ macht das wirkliche Spannungsfeld $\sigma_{ij}(x,y,z)$ die komplementäre Deformationsenergie $U_K$ minimal. $U_K(\sigma_{ij}) < U_K(\sigma_{ij}^*)$\\\\
+            Aus der Menge der zulässigen \textbf{Spannungsfelder} $\sigma_{ij}^*(x,y,z)$ \& damit verträglichen $\varepsilon_{ij}^*(x,y,z)$ macht das wirkliche Spannungsfeld $\sigma_{ij}(x,y,z)$ die komplementäre Deformationsenergie $U_K$ minimal. $U_K(\sigma_{ij}) < U_K(\sigma_{ij}^*)$\\
             \textit{Direkte Anwendung:} Ansatz für $\sigma_{ij}^*(x,y,z,a_\gamma)$, zulässig (GGB, SRB erfüllt). Berechne $\varepsilon_{ij}^*$ (aus SG), nicht unbedingt zulässig (KR, KRB eventuell nicht erfüllt). Berechne $U_K(\sigma_{ij}^*)$ und bestimme $a_\gamma$ mit $\frac{\partial U}{\partial a_\gamma}=0$.
             
         \subsubsection{Bsp}
@@ -33,15 +33,15 @@
             $U=\frac{1}{2}\int_0^l\int_\frac{-h}{2}^\frac{h}{2}\int_{-\frac{b}{2}}^\frac{b}{2}(\sigma_{xx}\cdot\varepsilon_{xx})dzdydx=6\cdot\alpha\cdot I\cdot l(\alpha^2l^2+\frac{b^2}{3}+abl)$\\
             $V=-P\cdot u_y(x=l)=-P(al^3+bl^2)$\\
             $E_p=6\alpha Il(a^2l2+\frac{b^2}{3}+abl)-P(al^3+bl^2)$
-            \vspace{-3mm}
+            %\vspace{-3mm}
             \small\[\frac{\partial E_p}{\partial a} = 0 \Rightarrow a=-\frac{P}{6\alpha I};\quad\frac{\partial E_p}{\partial b} = 0 \Rightarrow b=-\frac{P}{2\alpha I}\]\normalsize
         \vspace{-3mm}    
         \subsubsection{SMPE \& FEM}
-            \begin{wrapfigure}[5]{r}{0.4\linewidth}
-                \vspace{-5mm}
-                \includegraphics[width=\linewidth, height=23mm]{02/Dreieckselement}
+            \begin{wrapfigure}[5]{r}{0.5\linewidth}
+                \vspace{-2mm}
+                \includegraphics[width=\linewidth, height=25mm]{02/Dreieckselement}
             \end{wrapfigure}
-            Relation der Verschiebungsfreiheitsgrade der Knoten ($\{u\}$) und äusseren Kräften an den Knoten ($\{F\}$) über die \textbf{globale Steifigkeitsmatrix} ($\{K\}\in\mathbb{R}^{6\times6}$): $\{F\}=\{K\}\{u\}$
+            Relation der Verschiebungsfreiheitsgrade der Knoten ($\{u\}$) und äusseren Kräften an den Knoten ($\{F\}$) über die \textbf{globale Steifigkeitsmatrix} ($\{K\}\in\mathbb{R}^{6\times6}$): $\{F\}=\{K\}\{u\}$\\\\
             
         \subsubsection{Bsp}
             $u_1=ax_1+bx_2+c$; $u_2=dx_1+ex_2+f$\\
@@ -50,7 +50,7 @@
             \small$u_2=(u_2^B-u_2^A)x_1+(u_2^C-u_2^A)x_2+u_2^A$\normalsize\\
             $\varepsilon_{11}=(u_1^B-u_1^A)$; $\varepsilon_{22}=(u_2^C-u_2^A)$; $\varepsilon_{12}=\frac{1}{2}(u_2^B-u_2^A+u_1^C-u_1^A)$
             $\Rightarrow\sigma_{ij}(u_1^A,...,u_2^C,E,\nu)$ (aus KR)\\
-            $U=\frac{1}{2}\cdot\frac{1}{2}(\sigma_{11}\cdot\varepsilon_{11}+\sigma_{22}\cdot\varepsilon_{22}+2\sigma_{12}\cdot\varepsilon_{12})\cdot t$ mit Dicke $t$ und Fläche $\frac{1}{2}$.\\
+            $U=\frac{1}{2}\frac{1}{2}(\sigma_{11}\cdot\varepsilon_{11}+\sigma_{22}\cdot\varepsilon_{22}+2\sigma_{12}\cdot\varepsilon_{12})\cdot t$ mit Dicke $t$ und Fläche $\frac{1}{2}$.\\
             $V=-(F_1^A\cdot u_1^A+F_2^A\cdot u_2^A+...+F_2^C\cdot u_2^C)$\\
             $E_p=U+V=E_p(u_1^A,...,u_2^C,E,\nu,t)=\alpha_1(u_1^A)^2+\alpha_2u_1^Au_1^B+ ...-(F_1^Au_1^A+...)$\\
             Minimum $E_p:$ $\frac{\partial E_p}{\partial u_i^\kappa}=0$ mit $i=1,2$ \& $\kappa=A,B,C$ (6Gl)\\
