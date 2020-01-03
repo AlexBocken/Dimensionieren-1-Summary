@@ -4,7 +4,7 @@
         % \textbf{Statische Formulierung:} GGB \& SG erfüllt, KR zum Teil nicht. Generell zu weich.
         % \textbf{Kinematische Formulierung:} GGB \& SG nicht erfüllt, KR schon. Steifer als echt. Schlechte approx mit nur einer Funktion. Approximation wird besser durch besseren Ansatz und mehrere Elemente.
         \subsubsection{Statische Formulierung}
-            GGB \& SG erfüllt, KR zum Teil nicht. Generell zu weich.
+            GGB \& SG erfüllt, KR zum Teil nicht. Generell \textbf{weicher} als echt.
             \\\textit{Ansatz:} Balkenränder Spannungsfrei ($\sigma_{22}=\sigma_{33}=\tau_{13}=\tau_{23}=0$). $\sigma_{11} \neq 0$ aus $M_z$ und $\tau_{12} \neq 0$ aus $Q_y$.
             \begin{center}
                 $\displaystyle\sigma_{11}=-\frac{M_z(x)}{I}\cdot y$
@@ -18,8 +18,8 @@
                 \item Dehnung $\varepsilon$ mit SG ermitteln
             \end{itemize}
         \subsubsection{Kinematische Formuliereung}
-            GGB \& SG nicht erfüllt, KR schon, muss stetig sein. Steifer als echt. Schlechte approx mit nur einer Funktion. Approximation wird besser durch besseren Ansatz und mehrere Elemente.
-            \\\textit{Ansatz:} Verschiebungsfeld $\underline{u}$ auswählen, welches KR erfüllt (Bsp. $u_y(x) = a\cdot x^3+b\cdot x^2$
+            GGB \& SG nicht erfüllt, KR schon, muss stetig sein. \textbf{Steifer} als echt. Schlechte approx mit nur einer Funktion. Approximation wird besser durch besseren Ansatz und mehrere Elemente.
+            \\\textit{Ansatz:} Verschiebungsfeld $\underline{u}$ auswählen, welches KR erfüllt (Bsp. $u_y(x) = a\cdot x^3+b\cdot x^2$)
             \\\textit{Vorgehen:}
             \vspace{-2mm}
             \begin{itemize}
@@ -94,11 +94,11 @@
             \begin{itemize}
                 \item Koeff aus RB: $\Rightarrow u_1=(u_1^B-u_1^A)x_1+(u_1^C-u_1^A)x_2+u_1^A$; $u_2=\dots$
                 \item $\varepsilon_{ij}((u_1^A,...,u_2^C)$, $\sigma_ij(u_1^A,...,u_2^C,E,\nu)$ bestimmen
-                \item $U=\frac{1}{2}\frac{1}{2}(\sigma_{11}\cdot\varepsilon_{11}+\sigma_{22}\cdot\varepsilon_{22}+2\sigma_{12}\cdot\varepsilon_{12})\cdot t$ mit Dicke $t$ und Fläche $\frac{1}{2}$.
+                \item $U=\frac{1}{2}\frac{1}{2}l^2(\sigma_{11}\cdot\varepsilon_{11}+\sigma_{22}\cdot\varepsilon_{22}+2\sigma_{12}\cdot\varepsilon_{12})\cdot t$ mit Dicke $t$ und Fläche $\frac{1}{2}l^2$.
                 \item $V=-(F_1^A\cdot u_1^A+F_2^A\cdot u_2^A+...+F_2^C\cdot u_2^C)$
                 \item $E_p=U+V=E_p(u_1^A,...,u_2^C,E,\nu,t)=\alpha_1(u_1^A)^2+\alpha_2u_1^Au_1^B+ ...-(F_1^Au_1^A+...)$
                 \item Minimum $E_p:$ $\displaystyle\frac{\partial E_p}{\partial u_i^\kappa}=0$ mit $i=1,2$ \& $\kappa=A,B,C$ (6Gl)
-                \item Bsp: $\displaystyle\frac{\partial E_p}{\partial u_1^A}=0 \Leftrightarrow \frac{\partial U}{\partial u_1^A}=-\frac{\partial V}{\partial u_1^A}$ (lin. Fkt. in $u_1^A,..,u_2^C$) 
+                \item Bsp: $\displaystyle\frac{\partial E_p}{\partial u_1^A}=0 \Leftrightarrow -\frac{\partial V}{\partial u_1^A}=\frac{\partial U}{\partial u_1^A}$ (lin. Fkt. in $u_1^A,..,u_2^C$) 
                 \item $\Rightarrow F_1=\kappa_{11}u_1^A+...+\kappa_{16}u_2^c$; $\kappa_{11},...,\kappa_{16}$: 1. Zeile von $\{K\}$
             \end{itemize}
             

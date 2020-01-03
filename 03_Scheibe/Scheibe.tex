@@ -16,25 +16,32 @@
         %\vspace{-1mm}
         1, 2: Vernünftig, weil planare Dimensionen $\gg$ t \& keine Biegung. GGB reduziert sich zu: $\displaystyle\sigma_{xx,x} + \tau_{xy,y}=0$; $\sigma_{yy,y} + \tau_{xy,x}=0$
         $\rightarrow$Definiere $F(x,y)$ (ayrische Spannungsfkt) mit:\\ $\sigma_{xx}=F_{,yy}$; $\sigma_{yy}=F_{,xx}$; $\tau_{xy}=-F_{,xy}$. 
-        \\Aus Kompatibilitätsbedingung:\\ $\varepsilon_{xx,yy}+\varepsilon_{yy,xx}=2\varepsilon_{xy,xy} \rightarrow \Delta\Delta F=0$.
+        \\Aus Kompatibilitätsbedingung: $\varepsilon_{xx,yy}+\varepsilon_{yy,xx}=2\varepsilon_{xy,xy}$ \\$\rightarrow F_{,xxxx}+F_{,yyyy}+2F_{xxyy}=0 \Leftrightarrow\Delta\Delta F=0$.
         \\Funktion F(x,y) so wählen, damit RB erfüllt.
 \columnbreak    
     \subsection{Scheibe mit Loch}
     \vspace{-0.5mm}
         \begin{center}
-            \includegraphics[width=\linewidth, height=25mm]{images/03/mohr_and_loch.jpeg}
+            \includegraphics[width=0.8\linewidth, height=26mm]{03/mohr_and_loch_2.JPG}
+            $\tiny\lambda_{1,2}= \frac{1}{2}(\sigma_x+\sigma_y)\pm\sqrt{\frac{1}{4}(\sigma_x-\sigma_y)^2+\tau_{xy}^2}$
         \end{center}
-        \vspace{-3mm}
+        %\vspace{-3mm}
         \begin{itemize}
             \item Lochradius a $\ll$ L
             \item Belastung durch uniforme, einachsige Spannung S in grosser Entfernung vom Loch
             \item Spannungsfreie Rissflanken ($r = a; \forall\varphi\in\mathbb{R} $): $\sigma_{rr}=0, \tau_{r\varphi}=0$
         \end{itemize}
-        \vspace{-2mm}
+       % \vspace{-2mm}
         \textbf{Superposition} von mehreren Spannungen \& Spannungsrichtungen möglich. Bei Schubspannungen in Hauptspannungen umwandlen (Mohrscher Kreis).
+        \begin{center}
+            $\sigma_{\overset{\textcolor{blue}{\varphi\varphi}}{\textcolor{red}{rr}}}=\frac{s}{2}\left(1\cpm\frac{a^2}{r^2}\cpm cos(2\varphi)\left(1+3\frac{a^4}{r^4}\textcolor{red}{-4\frac{a^2}{r^2}}\right)\right)$
+            $\tau_{r\varphi}=\frac{s}{2}\left(1-3\frac{a^4}{r^4}+2\frac{a^2}{r^2}\right)sin(2\varphi)$
+        \end{center}
+        
     \subsection{Scheibe mit Riss}
         Spannungsfreie Rissflanken ($\forall r, \varphi=\pm\pi$): $\sigma_{\varphi\varphi}=0, \tau_{r\varphi}=0$
         \begin{center}
             \vspace{-2mm}
-            \includegraphics[width=75mm, height= 25mm]{03/Scheiberiss}
+            \includegraphics[width=70mm, ]{03/Scheiberiss}
         \end{center}
+\vspace{-2mm}

@@ -3,33 +3,42 @@
     \subsection{Festigkeitshypothesen}
         \subsubsection{Fliessbedingung/Fliessfunktion $\Phi(\sigma)$}
             Fliessbedingung: $\Phi(\sigma)<0$ (elastisch), $\Phi(\sigma)=0$ (plastisch)
-            \includegraphics[width=0.5\linewidth]{04/Verf_ideal_elpl}
-            \includegraphics[width=0.5\linewidth]{04/Verf_lin_isotr}
-            \includegraphics[width=0.5\linewidth]{04/Verf_lin_kin}
+            \begin{center}
+            \vspace{-2mm}
+                \includegraphics[width=0.9\linewidth,]{04/fliessbedingungen.jpeg}
+            \end{center}
+            
         \subsubsection{von Mieses'sche Vergleichsspannung}
-            \vspace{-3mm}
             \[\Phi_{\textrm{v.Mises}}= \sigma_1^2+\sigma_2^2+\sigma_3^2-\sigma_1\sigma_2-\sigma_1\sigma_3-\sigma_2\sigma_3 -\sigma_0^2\quad(=0)\]
             \[\Leftrightarrow \sigma_{\textrm{v. Mises}}^{vgl}= \sqrt{\sigma_1^2+\sigma_2^2+\sigma_3^2-\sigma_1\sigma_2-\sigma_1\sigma_3-\sigma_2\sigma_3} \quad\textrm(HS)\]
+            Experiment: Fliessen ist unabhängig vom hydrostatischen Spannungszustand.
         \subsubsection{Tresca'sche Vergleichsspannung}
             \textbf{Konservativer als von Mises'sche Vergleichsspannung} (Grenzfläche von Sechseck schneller erreicht als von Ellipse).
             \[\sigma_{\textrm{Tresca}}^{vgl}=\frac{1}{2}\textrm{max} \left(|\sigma_1-\sigma_2|,|\sigma_2-\sigma_3|,|\sigma_3-\sigma_1| \right) =\tau_0=\frac{\sigma_0}{2}\]
     \subsection{Statische Belastung}
         
-            % \subsubsection{Kraft- \& Deformationsgesteurete Belastung:}
-            % $\frac{\varepsilon_b}{\varepsilon_0}$ Deformationsgesteurete Belastung. Bsp vorgespannte Schraube, therm Spannungen. Begrenzung weniger konservativ $\sigma\varepsilon$-Diagramm gr Dehnung führt zu nur kl Spannungserhöhung).\\ $\frac{\sigma_B}{\sigma_0}$ Kraftgesteuerte Belastung. (Für viele Metalle $\frac{\varepsilon_b}{\varepsilon_0} \gg \frac{\sigma_B}{\sigma_0}$) Überschreiten $R_{p0.2}$ weniger Reserve.
+            \subsubsection{Kraft- \& Deformationsgesteurete Belastung:}
+            $\frac{\varepsilon_b}{\varepsilon_0}$ \textbf{Deformationsgesteurete Belastung:} Bspw vorgespannte Schraube oder therm Spannungen. Hier ist die Begrenzung der auftretenden Spannungen weniger konservativ, da plastische Deformationen zur Reduktion der pseudo-elastischen Spannungen führen. $\sigma\varepsilon$-Diagramm gr Dehnung führt zu nur kl Spannungserhöhung). Beeinflussen Grenzlast nicht.\\\\ 
+            $\frac{\sigma_B}{\sigma_0}$ \textbf{Kraftgesteuerte Belastung:} (Für viele Metalle $\frac{\varepsilon_b}{\varepsilon_0} \gg \frac{\sigma_B}{\sigma_0}$) Beim Überschreiten von $R_{p0.2}$ oft weniger Reserve $\rightarrow$ konservativere Dimensionierung.
         
         \subsubsection{Spannungsverteilung}
             Falls homogen: bei Fliessgrenze wird die ganze Struktur plastifiziert. $\rightarrow$ Versagen %bei Erreichen der Fliessgrenze wird es in der ganzen Struktur zur Plastifizierung kommen. 
               
             Falls linear: es kommt an lokalen Stellen zu Plastifizierungen $\rightarrow$ Versagen erst bei einer grösseren Belastung.\\
             \textbf{Zug:}
+            \vspace{-2mm}
             \begin{itemize}
                 \item Erste plastifizierung = vollständige Plastifizierung:
             \end{itemize}
-            \[F_{plast} = \sigma_0\ \cdot A\]
+            \vspace{-2mm}
+            \begin{center}
+                $\displaystyle F_{plast} = \sigma_0\ \cdot A$
+            \end{center}
             
             %\columnbreak
+            \vspace{-4mm}
             \textbf{Biegung:}
+            \vspace{-2mm}
             \begin{itemize}
                 \item Erste Plastifizierung:
             \end{itemize}
@@ -39,9 +48,12 @@
             \end{itemize}
             \[M_{versagen} = 2\int_{-b/2}^{b/2}\int_{0}^{h/2}\sigma(y)ydydz \quad\textrm{mit $\sigma(y) = \sigma_0$}\]
             
-        %\columnbreak
         \subsubsection{Formfaktoren}
-            Zug(homogen): $\frac{F_{versagen}}{F_{plast}}$\\
-            Biegung(linear): $\frac{P_{versagen}}{P_{plast}}$ (Reserve, da Plastifizierung linear)
+            \textit{Spannungsverteilung homogen} (Zug ideal plastisch) $f=1$.
+            \\\textit{Spannungsverteilung als lineare Funktion:} Fliessgrenze an einem Ort überschritten (1. Plastifizierung) aber grösster Teil des Querschnittes noch elastisch $\rightarrow$ Reserve. (Bsp. Biegung bei elastisch ideal-plastisch)
+            \[f=\frac{M_{versagen}}{M_{plastifizierung}}\]
+            \begin{center}
+                \includegraphics[width=0.7\linewidth]{04/formfaktoren.png}
+            \end{center}
     
             
