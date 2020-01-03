@@ -6,8 +6,9 @@
             \item Wie sieht das Deformationsbild aus?
         \end{itemize}
         \begin{center}
-            \includegraphics[width=0.7\linewidth , height= 30mm]{09/stability.jpeg}
+            \includegraphics[width=0.6\linewidth , height= 30mm]{09/stability.jpeg}
         \end{center}
+%\vfill\null\columnbreak
     \subsection{1D-Stabilitätsproblem}
         Balken axial belastet, an den Enden axial geführt (oben) und gelenkig gelagert (unten).
         \vspace{-2mm}
@@ -33,8 +34,8 @@
             \item \textbf{nichtlinear:} $P=P_K\left(1+\frac{2}{3}\left(\frac{q}{l}\right)^2+\frac{6}{5}\left(\frac{q}{l}\right)^4+\dots\right)$ \\mit $P_K=\frac{4C}{l}$
         \end{itemize}
         Bei nichtlinearer Betrachtung mehr als 1 Ruhelage bei $P\geqslant P_K$ ($q=0$ oder $q >0$) $\rightarrow$ "Verzweigungsproblem"/\textbf{"Bifurkation"}\\\\
-        Stabilitätssatz von Lagrange:\\
-        \textit{In einer Stabilen GGW-Lage hat das Gesamtpotential $E_p$ ein \textbf{Minimum} ($E'_p=0; E''_p>0$)}
+        \textit{Stabilitätssatz von Lagrange:}\\
+        In einer Stabilen GGW-Lage hat das Gesamtpotential $E_p$ ein \textbf{Minimum} ($E'_p=0; E''_p>0$)
         \vspace{-2mm}\[E_p = U+V\]
         U: Deformationsenergie (zb. $E_p$ von Feder) 
         \\V: Potential äussere Kräfte
@@ -43,12 +44,12 @@
         mit P: Angriffskraft; \quad $\chi$: Verschiebung der Kraft\\\\
         \textbf{Vorgehen:}
         \begin{enumerate}
-            \item Wähle zulässiges Verschiebungsfeld v(x)
+            \item Wähle zulässiges Verschiebungsfeld $v(x)$
             \item Finde $\displaystyle U(v) \rightarrow U = \frac{1}{2}EI\int_{0}^{L}(v'')^2dx$ \quad(MechII)
             \item Finde $\displaystyle \chi(v) \rightarrow \chi=\frac{1}{2}\int_{0}^{L}(v')^2dx$ \qquad(Geometrie)
             \item $Q=\frac{U}{\chi}$ Rayleighscher Quotient
             \item $\displaystyle\frac{\partial Q}{\partial\alpha}=0 \textrm{ oder } \frac{\partial Q}{\partial\beta}=0 \rightarrow$ Bedingung für $\alpha \textrm{ und } \beta$
-            
+            \item $\Tilde{P}_k=\textrm{min}(Q)$
             
         \end{enumerate}
         
