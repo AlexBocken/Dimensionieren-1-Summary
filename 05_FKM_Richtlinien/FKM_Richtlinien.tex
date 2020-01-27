@@ -15,16 +15,13 @@
             \vspace{-2mm}\[ h = \frac{\frac{1}{3} \textrm{Spur}[T]}{\sigma_{\textrm{v. Mises}}} \quad \textrm{[T]: Spannungstensor}\]
         \subsubsection{Bauteilfestigkeit $\sigma_{\textrm{SK}}$}
             An Normprobe gemessene Fliessgrenze erffordert meistens Korrektur! \\$R_P$: Fliessgrenze Bauteil; $R_{P,N}$: Fliessgrenze Normprobe.
-            \vspace{-2mm}
             \[R_P = K_{d,P}\cdot K_A\cdot R_{P,N}\]
-            \vspace{-4mm}
             \[\sigma_{\textrm{SK}}=R_p\cdot n_{\textrm{pl}} \quad\textrm{mit: } \small n_{\textrm{pl}}=\textrm{min} \left( \sqrt{ \frac{E\cdot\varepsilon_{\textrm{ertr}}}{R_p}};K_p \right) \quad \sigma_v^{el}\frac{\sigma_v^{el}}{E}=R_p\cdot\varepsilon_{\textrm{ertr}}\]\normalsize
             Hom. Spannungsverteilung: $n_{\textrm{pl}}=1$ (Keine Reserve)
             \vspace{-1mm}
             \[K_p: \textrm{pl. Formzahl} = \frac{\textrm{Last beim Versagen 
-            (bspw vMises)}}{\textrm{Last bei erster Plast}}\]
+            (zB: }\sigma_{\textrm{v. Mises}}^{vgl}=R_e\textrm{)}}{\textrm{Last bei erster Plast}}\]
             vollpl.: aus FE; el. Grenzl.: wenn $\sigma_v = R_p$ erreicht.
-\vfill\null\columnbreak
         \subsubsection{Sicherheitsfaktor $J_{\textrm{ges}}$}
         \small\[J_{\textrm{ges}}= J_s \cdot \left[ J_z \cdot \textrm{max}\left(\frac{J_m \cdot R_p}{R_m}; J_p \right) \right] \]\normalsize
         $J_s$: Lastfaktor (Sicher:=1); $J_z$: Schweissteile; $J_p$: plastifizierung
@@ -32,7 +29,7 @@
             \includegraphics[width=0.8\linewidth]{05/Sicherheitsfaktoren.png}
         \end{center}
     
-    \subsection{BSP}
+    \subsection{Bsp}
         \subsubsection{plastische Formzahl an einem Druckkessel mit Loch}
             \begin{enumerate}
                 \item Loch belastet mit $2s,s$ wobei $s=\sigma_{zz}$ $\rightarrow$ kritische Stelle $=5s$
@@ -44,7 +41,6 @@
         \subsubsection{Dimensionieren eines Kessels mit Loch nach FKM}
         Ziel: $ a_{SK}<1 $
         \\\textit{Vorgehen:}
-        \vspace{-3mm}
         \begin{enumerate}
             \item $ a_{{SK}} = \frac{\frac{\sigma_v}{\sigma_{{SK}}}}{J_{ges}}  \rightarrow  \sigma_v \cdot J_{ges} < \sigma_{{SK}} $
             \item Wegen Mehrachsigkeit kein weiterer Nachweis nötig

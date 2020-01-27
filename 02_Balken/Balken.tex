@@ -1,17 +1,10 @@
 \section{Balken}
     \subsection{Formulierungen}
-        % 2 Möglichkeiten: Statische und Kinematische Formulierung.\\
-        % \textbf{Statische Formulierung:} GGB \& SG erfüllt, KR zum Teil nicht. Generell zu weich.
-        % \textbf{Kinematische Formulierung:} GGB \& SG nicht erfüllt, KR schon. Steifer als echt. Schlechte approx mit nur einer Funktion. Approximation wird besser durch besseren Ansatz und mehrere Elemente.
         \subsubsection{Statische Formulierung}
             GGB \& SG erfüllt, KR zum Teil nicht. Generell \textbf{weicher} als echt.
             \\\textit{Ansatz:} Balkenränder Spannungsfrei ($\sigma_{22}=\sigma_{33}=\tau_{13}=\tau_{23}=0$). $\sigma_{11} \neq 0$ aus $M_z$ und $\tau_{12} \neq 0$ aus $Q_y$.
-            \begin{center}
-                $\displaystyle\sigma_{11}=-\frac{M_z(x)}{I}\cdot y$
-            \end{center}
-            \vspace{-3mm}
+                \[\sigma_{11}=-\frac{M_z(x)}{I}\cdot y\]
             \textit{Vorgehen:}
-            \vspace{-2mm}
             \begin{itemize}
                 \item Beanspruchung am Balken ermitteln (MechII)
                 \item Spannungen $\sigma_{11}$ und $\tau_{12}$ aus Beanspruchung berechnen (MechII). (Muss GGB erfüllen)
@@ -21,7 +14,6 @@
             GGB \& SG nicht erfüllt, KR schon, muss stetig sein. \textbf{Steifer} als echt. Schlechte approx mit nur einer Funktion. Approximation wird besser durch besseren Ansatz und mehrere Elemente.
             \\\textit{Ansatz:} Verschiebungsfeld $\underline{u}$ auswählen, welches KR erfüllt (Bsp. $u_y(x) = a\cdot x^3+b\cdot x^2$)
             \\\textit{Vorgehen:}
-            \vspace{-2mm}
             \begin{itemize}
                 \item Falls möglich Koeff mit KR bestimmen
                 \item Spannungen $\sigma_{ij}$ mit SG bestimmen
@@ -45,7 +37,6 @@
         \subsubsection{Satz vom Minium der potentiellen Energie (SMPE)}
             Aus der Menge der zulässigen \textbf{Verschiebungsfelder} $u_i^*(x,y,z)$ \& der damit verträglichen Spannungsfelder $\sigma_{ij}^*(x,y,z)$ macht das wirkliche Verschiebungsfeld $u_i(x,y,z)$ $E_P$ \textbf{minimal}.
             \[E_p(u_i) < E_p(u_i^*)\]
-            %\textit{Direkte Anwendung:} Ansatz für $u_i(x,y,z,a_\gamma)$, zulässig (stetig, KRB erfüllt). Berchene $\varepsilon_{ij}^*$ (aus KR) und verträgliche Spannungen $\sigma_{ij}^*$ (aus SG). $\sigma_{ij}^*$ braucht nicht zulässig zu sein (GGB \& SRB evtl. nicht erfüllt). Berechne $E_p(u_i^*)$ und bestimme $a_\gamma$ mit $\frac{\partial E_p}{\partial a_\gamma}=0$.
             \textit{Direkte Anwendung:}
             \begin{enumerate}
                 \item Ansatz für $u_i(x,y,z,a_{\gamma})$
@@ -55,7 +46,18 @@
                 \[\frac{\partial E_p}{\partial a_{\gamma}} =0\]
             \end{enumerate}
             
-        \subsubsection{Bsp}
+        \subsubsection{Satz vom Min. der kompl. Deform-energie (SMkDE)}
+            Aus der Menge der zulässigen \textbf{Spannungsfelder} $\sigma_{ij}^*(x,y,z)$ \& damit verträglichen $\varepsilon_{ij}^*(x,y,z)$ macht das wirkliche Spannungsfeld $\sigma_{ij}(x,y,z)$ die komplementäre Deformationsenergie $U_K$ \textbf{minimal}. 
+            \[U_K(\sigma_{ij}) < U_K(\sigma_{ij}^*)\]
+            \textit{Direkte Anwendung:}
+            \begin{enumerate}
+                \item zulässiger Ansatz für $\sigma_{ij}^*(x,y,z,a_{\gamma})$ (GGB \& SRB erfüllt) 
+                \item $\varepsilon_{ij}^*$ berechnen (KR evtl. nicht erfüllt)
+                \item $U_K(\sigma_{ij}^*)$ berechnen
+                \item Koeff mit \textbf{Verfahren von Ritz} ermitteln (siehe oben)
+            \end{enumerate}
+            
+        \subsubsection{Bsp Verschiebungsansatz}
             Ansatz:\\
             $u_y=ax^3+bx^2; \quad u_x=-\frac{du_y}{dx}y= -(3ax^2+2bx)y; \quad u_z = 0$\\
             KR: $\varepsilon_{xx} =(-6ax-2b)y; \quad \varepsilon_{yy}=\varepsilon_{zz}=\varepsilon_{xy}=\varepsilon_{yz} = \varepsilon_{xz}=0$\\
@@ -66,31 +68,15 @@
             $E_p=6\alpha Il(a^2l^2+\frac{b^2}{3}+abl)-P(al^3+bl^2)$
             %\vspace{-3mm}
             \small\[\frac{\partial E_p}{\partial a} = 0 \Rightarrow a=-\frac{P}{6\alpha I};\quad\frac{\partial E_p}{\partial b} = 0 \Rightarrow b=\frac{Pl}{2\alpha I}\]\normalsize
-        \vspace{-3mm}    
-        
-        \subsubsection{Satz vom Min. der kompl. Deform-energie (SMkDE)}
-            Aus der Menge der zulässigen \textbf{Spannungsfelder} $\sigma_{ij}^*(x,y,z)$ \& damit verträglichen $\varepsilon_{ij}^*(x,y,z)$ macht das wirkliche Spannungsfeld $\sigma_{ij}(x,y,z)$ die komplementäre Deformationsenergie $U_K$ \textbf{minimal}. 
-            \[U_K(\sigma_{ij}) < U_K(\sigma_{ij}^*)\]
-            %\textit{Direkte Anwendung:} Ansatz für $\sigma_{ij}^*(x,y,z,a_\gamma)$, zulässig (GGB, SRB erfüllt). Berechne $\varepsilon_{ij}^*$ (aus SG), nicht unbedingt zulässig (KR, KRB eventuell nicht erfüllt). Berechne $U_K(\sigma_{ij}^*)$ und bestimme $a_\gamma$ mit $\frac{\partial U}{\partial a_\gamma}=0$.
-            \textit{Direkte Anwendung:}
-            \begin{enumerate}
-                \item zulässiger Ansatz für $\sigma_{ij}^*(x,y,z,a_{\gamma})$ (GGB \& SRB erfüllt) 
-                \item $\varepsilon_{ij}^*$ berechnen (KR evtl. nicht erfüllt)
-                \item $U_K(\sigma_{ij}^*)$ berechnen
-                \item Koeff mit \textbf{Verfahren von Ritz} ermitteln (siehe oben)
-            \end{enumerate}
-            
         \subsubsection{SMPE \& FEM}
-            \begin{wrapfigure}[5]{r}{0.5\linewidth}
+            \begin{wrapfigure}[8]{r}{0.5\linewidth}
                 \vspace{-2mm}
                 \includegraphics[width=\linewidth, height=25mm]{02/Dreieckselement}
             \end{wrapfigure}
             Relation der Verschiebungsfreiheitsgrade der Knoten ($\{u\}$) und äusseren Kräften an den Knoten ($\{F\}$) über die \textbf{Elementsteifigkeitsmatrix} ($\{K\}\in\mathbb{R}^{6\times6}$): $\{F\}=\{K\}\{u\}$\\\\
-            
+\vfill\null\columnbreak            
         \subsubsection{Bsp}
             Ansatz: $u_1=ax_1+bx_2+c$; $u_2=dx_1+ex_2+f$
-            %$\Rightarrow u_1(x_1=0,x_2=0)=c=u_1^A$; $\quad u_2(x_1=0,x_2=0)=f=u_2^A$;...\\
-            % $\varepsilon_{11}=(u_1^B-u_1^A)$; $\varepsilon_{22}=(u_2^C-u_2^A)$; $\varepsilon_{12}=\frac{1}{2}(u_2^B-u_2^A+u_1^C-u_1^A)$
             \begin{itemize}
                 \item Koeff aus RB: $\Rightarrow u_1=(u_1^B-u_1^A)x_1+(u_1^C-u_1^A)x_2+u_1^A$; $u_2=\dots$
                 \item $\varepsilon_{ij}((u_1^A,...,u_2^C)$, $\sigma_ij(u_1^A,...,u_2^C,E,\nu)$ bestimmen

@@ -4,12 +4,14 @@
             \item Inelastische Dehnungen
             \item Für Sekundärkriechen: $\dot{\varepsilon}_{cr} = f(T,\sigma)$;\\$\sigma = \textrm{const.} \Rightarrow \dot{\varepsilon}_{cr}= \textrm{const.}$
         \end{itemize}
+        \vspace{-4mm}
         \includegraphics[width=0.45\linewidth]{08/Kriechkurve1.png}
         \includegraphics[width=0.55\linewidth, ]{08/E_cr-t-diag.png}
     \subsection{Ursachen}
         Kriechen tritt bei metallischen Stoffen bei $ T > T_{schmelz} \cdot 0.3  $ auf.
-        Bewegung von Versetzungen, Gleit- und Diffussionsphänomene. $\rightarrow$ \textbf{inelastische Deformation}
-        
+        Bewegung von Versetzungen, Gleit- und Diffussionsphänomene. 
+        \\$\rightarrow$ \textbf{inelastische Deformation}
+        \vspace{2mm}
     \subsection{Relaxation}
         \subsubsection{Nach Norton}
             %ges: $\sigma(t)$ geg: $\varepsilon_{cr}$, $\varepsilon{el}$
@@ -17,24 +19,26 @@
             Separation der Variablen und Integrationskonstante mit Anfangsspannung bestimmen.
             \\\textbf{Analytische Lösung:}
             \vspace{-2mm}\[\sigma(t)=\left(\sigma_{0}^{1-n}-(1-n)A\cdot E\cdot t\right)^{\frac{1}{1-n}}\]
-%\columnbreak
+            
     \subsection{Kriechschädigung}
         \subsubsection{Kumulative Schädigung/ Time Fraction Rule}
             Spannungsgeschichte $\sigma(t)$ in \textbf{diskrete Intervalle} $\Delta t_n$ mit konstanter Spannung $\sigma_n$ \& zugehöriger Rupture-Time $t_B(\sigma_n)$ aufteilen.
-            \vspace{-2mm}\[D_{cr}=\sum_n\frac{\Delta t_{n}}{t_B(\sigma_n)} < 1\]
+            \[D_{cr}=\sum_n\frac{\Delta t_{n}}{t_B(\sigma_n)} < 1\]
             \textbf{kontinuierliche Sannungsgeschichte:}
-            \vspace{-2mm}\[D_{cr}=\int_0^t\frac{1}{t_B(\sigma(t))}dt < 1\]
+            \[D_{cr}=\int_0^t\frac{1}{t_B(\sigma(t))}dt < 1\]
             Spannungsrelaxation$\rightarrow \sigma(t)$ mit $\dot{\sigma}<0$
-%\columnbreak
+            
         \subsubsection{Ductility Exhaustion Method}
-            \[D_{cr}=\int_0^{\bar{\varepsilon}_{cr}}\frac{1}{\varepsilon_{cr}^B(\dot{\varepsilon}_{cr})}d\varepsilon_{cr} \approx \int_0^{\bar{\varepsilon}_{cr}}\frac{\dot{\varepsilon}_{cr}}{\varepsilon_{cr}^B(\dot{\varepsilon}_{cr})}dt< 1\]
-            $\bar{\varepsilon}_{cr}$: ersetzen durch $\varepsilon_{cr}(t_{Ende})=\varepsilon_0-\frac{\sigma(t_{Ende})}{E}$
+            \[D_{cr}=\int_0^{\bar{\varepsilon}_{cr}}\frac{1}{\varepsilon_{cr}^B(\dot{\varepsilon}_{cr})}d\varepsilon_{cr} \approx \int_0^{t^{\ast}}\frac{\dot{\varepsilon}_{cr}}{\varepsilon_{cr}^B(\dot{\varepsilon}_{cr})}dt< 1\]
+            $\bar{\varepsilon}_{cr}=\varepsilon_{cr}(t^{*})=\varepsilon_0-\frac{\sigma(t^{*})}{E}$
             \\Beobachtung: $\varepsilon_{cr}^{B}\downarrow$ mit zunehmender Hydrostatischer Belast.
         \subsubsection{Lebensdauer}
             \[N\cdot D_{cr}^{BK} = 1\]
             $N$: Anzahl Zyklen bis zu Versagen (siehe Miner Regel)
+            \\$D_{cr}^{BK}$: Kriechschädigung pro Belastungskollektiv
+\vfill\null\columnbreak
     \subsection{Interaktion Kriechen-Ermüdung}
-        Kriechen oder Relaxation innerhalb einer zyklischen Belastung führen zu niedriger $N_{zul}$ für gleiche Dehnungsschwingbreite $\Delta\varepsilon$. $\qquad D_{cr}\uparrow \quad\rightarrow\quad N_{zul}(\Delta\varepsilon)\downarrow$\\
+        Kriechen oder Relaxation innerhalb einer zyklschen Belastung führen zu niedriger $N_{zul}$ für gleiche Dehnungsschwingbreite $\Delta\varepsilon$. $D_{cr}\uparrow \quad\rightarrow\quad N_{zul}(\Delta\varepsilon)\downarrow$\\
             \includegraphics[width=0.55\linewidth, height=30mm]{08/LCF_schaed.jpg}
             \includegraphics[width=0.45\linewidth, height=30mm]{08/damage_sum_diag.png}
         
