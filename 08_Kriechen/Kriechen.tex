@@ -14,23 +14,20 @@
         \vspace{2mm}
     \subsection{Relaxation}
         \subsubsection{Nach Norton}
-            ges: $\sigma(t)$ geg: $\varepsilon_{cr}$, $\varepsilon{el}$
-            \[\varepsilon_{cr}+\varepsilon_{el}=\varepsilon_0=\textrm{const.} \qquad \dot{\varepsilon}_{cr}+\dot{\varepsilon}_{el}=0 \Rightarrow A\sigma^n + \frac{\dot{\sigma}}{E}=0\]
-            Separation der Variablen und Integrationskonstante mit Anfangsspannung bestimmen.
-            
+            \[\varepsilon_{cr}+\varepsilon_{el}=\varepsilon_0=\textrm{const.} \qquad \boxed{\dot{\varepsilon}_{cr}+\dot{\varepsilon}_{el}=0 \Rightarrow A\sigma^n + \frac{\dot{\sigma}}{E}=0}\]
             \textbf{Analytische Lösung:}
-            \vspace{-2mm}\[\sigma(t)=\left(\sigma_{0}^{1-n}-(1-n)A\cdot E\cdot t\right)^{\frac{1}{1-n}}\]
+            \vspace{-1mm}\[\boxed{\sigma(t)=\left(\sigma_{0}^{1-n}-(1-n)A\cdot E\cdot t\right)^{\frac{1}{1-n}}}\]
             
     \subsection{Kriechschädigung}
         \subsubsection{Kumulative Schädigung/ Time Fraction Rule}
             Spannungsgeschichte $\sigma(t)$ in \textbf{diskrete Intervalle} $\Delta t_n$ mit konstanter Spannung $\sigma_n$ \& zugehöriger Rupture-Time $t_B(\sigma_n)$ aufteilen.
             \[D_{cr}=\sum_n\frac{\Delta t_{n}}{t_B(\sigma_n)} < 1\]
             \textbf{kontinuierliche Sannungsgeschichte:}
-            \[D_{cr}=\int_0^t\frac{1}{t_B(\sigma(t))}dt < 1\]
+            \[\boxed{D_{cr}=\int_0^t\frac{1}{t_B(\sigma(t))}dt < 1}\]
             Spannungsrelaxation$\rightarrow \sigma(t)$ mit $\dot{\sigma}<0$
             
         \subsubsection{Ductility Exhaustion Method}
-            \[D_{cr}=\int_0^{\bar{\varepsilon}_{cr}}\frac{1}{\varepsilon_{cr}^B(\dot{\varepsilon}_{cr})}d\varepsilon_{cr} \approx \int_0^{t^{\ast}}\frac{\dot{\varepsilon}_{cr}}{\varepsilon_{cr}^B(\dot{\varepsilon}_{cr})}dt< 1\]
+            \[\boxed{D_{cr}=\int_0^{\bar{\varepsilon}_{cr}}\frac{1}{\varepsilon_{cr}^B(\dot{\varepsilon}_{cr})}d\varepsilon_{cr} \approx \int_0^{t^{\ast}}\frac{\dot{\varepsilon}_{cr}}{\varepsilon_{cr}^B(\dot{\varepsilon}_{cr})}dt< 1}\]
             $\bar{\varepsilon}_{cr}=\varepsilon_{cr}(t^{*})=\varepsilon_0-\frac{\sigma(t^{*})}{E}$
             \\Beobachtung: $\varepsilon_{cr}^{B}\downarrow$ mit zunehmender Hydrostatischer Belast.
         \subsubsection{Lebensdauer}

@@ -8,19 +8,19 @@
                 \item $\sigma_{SK}$: Materialfestgkeit, bauteilspezifisch
                 \item $J_{ges}$: Sicherheitsfaktor (Gesamtsicherheitsfaktor)
             \end{enumerate}
-            \vspace{-1mm}\[a_{SK} = \frac{\sigma_{v}}{\sigma_{sk}/J_{ges}} \]
+            \vspace{-1mm}\[\boxed{a_{SK} = \frac{\sigma_{v}}{\sigma_{sk}/J_{ges}}}\]
     
         \subsubsection{Mehrachsigkeit}
             Falls $h > 1.33$ zusätzlicher Nachweis erforderlich! (Bruchdehnung und ev. maximale äquivalente Spannung bei starker Mehrachsigkeit kleiner)
-            \vspace{-2mm}\[ h = \frac{\frac{1}{3} \textrm{Spur}[T]}{\sigma_{\textrm{v. Mises}}} \quad \textrm{[T]: Spannungstensor}\]
+            \vspace{-2mm}\[\boxed{h = \frac{\frac{1}{3} \textrm{Spur}[T]}{\sigma_{\textrm{v. Mises}}}} \quad \textrm{[T]: Spannungstensor}\]
         \subsubsection{Bauteilfestigkeit $\sigma_{\textrm{SK}}$}
             An Normprobe gemessene Fliessgrenze erffordert meistens Korrektur! \\$R_P$: Fliessgrenze Bauteil; $R_{P,N}$: Fliessgrenze Normprobe.
-            \[R_P = K_{d,P}\cdot K_A\cdot R_{P,N}\]
-            \[\sigma_{\textrm{SK}}=R_p\cdot n_{\textrm{pl}} \quad\textrm{mit: } \small n_{\textrm{pl}}=\textrm{min} \left( \sqrt{ \frac{E\cdot\varepsilon_{\textrm{ertr}}}{R_p}};K_p \right) \quad \sigma_v^{el}\frac{\sigma_v^{el}}{E}=R_p\cdot\varepsilon_{\textrm{ertr}}\]\normalsize
+            \[\boxed{\sigma_\textrm{SK}=R_p\cdot n_{\textrm{pl}}}\]
+            \[R_P = K_{d,P}\cdot K_A\cdot R_{P,N};\qquad n_{\textrm{pl}}=\textrm{min} \left( \sqrt{ \frac{E\cdot\varepsilon_{\textrm{ertr}}}{R_p}};K_p \right)\]
             Hom. Spannungsverteilung: $n_{\textrm{pl}}=1$ (Keine Reserve)
             \vspace{-1mm}
-            \[K_p: \textrm{pl. Formzahl} = \frac{\textrm{Last beim Versagen 
-            (zB: }\sigma_{\textrm{v. Mises}}^{vgl}=R_e\textrm{)}}{\textrm{Last bei erster Plast}}\]
+            \[\textrm{pl. Formzahl}: \boxed{K_p  = \frac{\textrm{Last beim Versagen 
+            (zB: }\sigma_{\textrm{v. Mises}}^{vgl}=R_e\textrm{)}}{\textrm{Last bei erster Plast}}}\]
             vollpl.: aus FE; el. Grenzl.: wenn $\sigma_v = R_p$ erreicht.
         \subsubsection{Sicherheitsfaktor $J_{\textrm{ges}}$}
         \small\[J_{\textrm{ges}}= J_s \cdot \left[ J_z \cdot \textrm{max}\left(\frac{J_m \cdot R_p}{R_m}; J_p \right) \right] \]\normalsize
@@ -39,8 +39,7 @@
             \end{enumerate}
             
         \subsubsection{Dimensionieren eines Kessels mit Loch nach FKM}
-        Ziel: $ a_{SK}<1 $
-        \\\textit{Vorgehen:}
+        \textit{Vorgehen:}
         \begin{enumerate}
             \item $ a_{{SK}} = \frac{\frac{\sigma_v}{\sigma_{{SK}}}}{J_{ges}}  \rightarrow  \sigma_v \cdot J_{ges} < \sigma_{{SK}} $
             \item Wegen Mehrachsigkeit kein weiterer Nachweis nötig

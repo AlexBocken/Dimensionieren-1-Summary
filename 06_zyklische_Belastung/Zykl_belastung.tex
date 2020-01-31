@@ -20,11 +20,18 @@
         \end{center}
     \subsection{Smith-Diagram $\sigma_W(\sigma_m)$}
         \includegraphics[width=\linewidth, height= 45mm]{06/smith-diagram2.jpeg}
+        \vspace{-2mm}
     \subsection{Kumulative Ermüdung (Miner-Regel)}
         Belastung oft komplexer als 'einstufig' $\rightarrow$ Mehrstufenkollektiv. Belastungsfunktion wird in Abschnitte aufgeteilt.
         \vspace{-2mm}
-        \[D_{\textrm{BK}}= \sum_{i}\frac{n_{i}}{N_{\textrm{Zul}}(\Delta\sigma_{i},\sigma_{m,i})} \quad D_{\textrm{BK}}: \frac{\textrm{Schädigung}}{\textrm{Belastungskollektive}} \]
-        \[T_{L}=\frac{1}{D_{\textrm{BK}}}\cdot T_{\textrm{BK}} \qquad\quad T_{\textrm{BK}}:\frac{\textrm{Belastungszeit}}{\textrm{Belastungskollektive}}\]
+        \begin{center}
+            \begin{tabular}{c c}
+                $\boxed{D_{\textrm{BK}}= \sum_{i}\frac{n_{i}}{N_{\textrm{Zul}}(\Delta\sigma_{i},\sigma_{m,i})}}$ & $D_{\textrm{BK}}: \frac{\textrm{Schädigung}}{\textrm{Belastungskollektive}}$ \\
+                $\boxed{T_{L}=\frac{1}{D_{\textrm{BK}}}\cdot T_{\textrm{BK}}}$ & $T_{\textrm{BK}}:\frac{\textrm{Belastungszeit}}{\textrm{Belastungskollektive}}$
+            \end{tabular}
+        \end{center}
+        %\[\boxed{D_{\textrm{BK}}= \sum_{i}\frac{n_{i}}{N_{\textrm{Zul}}(\Delta\sigma_{i},\sigma_{m,i})}} \quad D_{\textrm{BK}}: \frac{\textrm{Schädigung}}{\textrm{Belastungskollektive}} \]
+        %\[\boxed{T_{L}=\frac{1}{D_{\textrm{BK}}}\cdot T_{\textrm{BK}}} \qquad\quad T_{\textrm{BK}}:\frac{\textrm{Belastungszeit}}{\textrm{Belastungskollektive}}\]
 
     \subsection{Haigh-Diagramm}
         \begin{center}
@@ -34,15 +41,14 @@
     \subsection{Kerben}
         \subsubsection{Lokal Elastisch}
             Anriss erfolgt oft an Kerben. An den kritischen Stellen herrscht oft ein \textbf{Ebener Spannungszustand} (Spannungsfreie Oberfläche).\\ $K_F$: Abminderung der Zeitfestigkeit; $K_T$: Abminderung der Wechselfestigkeit. Da $K_F < K_T$ wäre eine Beurteilung basierend auf der lokalen Spannungsamplitude mit der Wöhlerkurve aus ungekerbten Proben zu konservativ. $\sigma_{\textrm{max}}=K_F \cdot \sigma_{\textrm{nom}}$ statt $K_T$.
-            \[K_F = q\cdot(K_T-1)+1\]
+            \[\boxed{K_F = q\cdot(K_T-1)+1}\]
         \subsubsection{Lokal inelastisch (LCF an Kerbe)}
-            \vspace{-1mm}
             \[\Delta\sigma_K = K_{\sigma} \cdot \Delta\textrm{s} \qquad \Delta\textrm{s}:\textrm{Fernfeld Schwingbreite}\]
             \[\Delta\varepsilon_K = K_{\varepsilon} \cdot \Delta\textrm{e} \qquad \Delta\sigma_K:\textrm{lok. Schwingbreite}\]
             \[\Delta\textrm{e}=\frac{\Delta s}{E} \qquad\qquad \Delta\varepsilon_K:\textrm{lok. Schwingbreite}\]
     \subsection{Neuber Hyperbel}
         Abschätzung von Dehnungsamplituden bei lokaler plast. im Kerbgrund.
-        \[\sigma_A^E\cdot\varepsilon_A^E = \sigma_A^P \cdot \varepsilon_A^P\]
+        \[\boxed{\sigma_A^E\cdot\varepsilon_A^E = \sigma_A^P \cdot \varepsilon_A^P}\]
         Neuber setzt voraus, dass:
         \begin{itemize}
             \item Im Kerbgrund ein einachsiger Spannungszustand besteht.

@@ -9,15 +9,18 @@
             
         \subsubsection{von Mises'sche Vergleichsspannung}
             \[\Phi_{\textrm{v.Mises}}= \sigma_1^2+\sigma_2^2+\sigma_3^2-\sigma_1\sigma_2-\sigma_1\sigma_3-\sigma_2\sigma_3 -\sigma_0^2\quad(=0)\]
-            \[\Leftrightarrow \sigma_{\textrm{v. Mises}}^{vgl}= \sqrt{\sigma_1^2+\sigma_2^2+\sigma_3^2-\sigma_1\sigma_2-\sigma_1\sigma_3-\sigma_2\sigma_3} \quad\textrm(HS)\]
+            \[\Leftrightarrow \boxed{\sigma_{\textrm{v. Mises}}^{vgl}= \sqrt{\sigma_1^2+\sigma_2^2+\sigma_3^2-\sigma_1\sigma_2-\sigma_1\sigma_3-\sigma_2\sigma_3}} \quad\textrm(HS)\]
             Experiment: Fliessen ist unabhängig vom hydrostatischen Spannungszustand.
         \subsubsection{Tresca'sche Vergleichsspannung (maximale Schubspannungshypothese)}
             \textbf{Konservativer} als von Mises'sche Vergleichsspannung (Grenzfläche von Sechseck schneller erreicht als von Ellipse).
-            \vspace{-2mm}\[\sigma_{\textrm{Tresca}}^{vgl}=\textrm{max} \left(|\sigma_1-\sigma_2|,|\sigma_2-\sigma_3|,|\sigma_3-\sigma_1| \right) =2\tau_0\]
+            \vspace{-2mm}
+            \[\boxed{\sigma_{\textrm{Tresca}}^{vgl}=\textrm{max} \left(|\sigma_1-\sigma_2|,|\sigma_2-\sigma_3|,|\sigma_3-\sigma_1| \right) =2\tau_0}\]
+            \vspace{-2mm}
     \subsection{Statische Belastung}
         
             \subsubsection{Kraft- \& Deformationsgesteurete Belastung:}
-            $\frac{\varepsilon_b}{\varepsilon_0}$ \textbf{Deformationsgesteuerte Belastung:} Bspw vorgespannte Schraube oder thermische Spannungen. Hier ist die Begrenzung der auftretenden Spannungen weniger konservativ, da plastische Deformationen zur Reduktion der pseudo-elastischen Spannungen führen. $\sigma$-$\varepsilon$-Diagramm: gr Dehnung führt zu nur kl Spannungserhöhung). Beeinflussen Grenzlast nicht.\\\\ 
+            $\frac{\varepsilon_b}{\varepsilon_0}$ \textbf{Deformationsgesteuerte Belastung:} Bspw vorgespannte Schraube oder thermische Spannungen. Begrenzung der auftretenden Spannungen weniger konservativ, da plastische Deformationen zur Reduktion der pseudo-elastischen Spannungen führen. $\sigma$-$\varepsilon$-Diagramm: gr Dehnung führt zu nur kl Spannungserhöhung). Beeinflussen Grenzlast nicht.
+            
             $\frac{\sigma_B}{\sigma_0}$ \textbf{Kraftgesteuerte Belastung:} (Für viele Metalle $\frac{\varepsilon_b}{\varepsilon_0} \gg \frac{\sigma_B}{\sigma_0}$) Beim Überschreiten von $R_{p0.2}$ oft weniger Reserve $\rightarrow$ konservativere Dimensionierung.
         
         \subsubsection{Spannungsverteilung}
@@ -29,7 +32,7 @@
             \begin{itemize}
                 \item Erste plastifizierung = vollständige Plastifizierung:
             \end{itemize}
-            \[\displaystyle F_{plast} = \sigma_0\ \cdot A\]
+            \[F_{plast} = \sigma_0\ \cdot A\]
             \textbf{Biegung:}
             \begin{itemize}
                 \item Erste Plastifizierung:
@@ -43,7 +46,7 @@
         \subsubsection{Formfaktoren}
             \textit{Spannungsverteilung homogen:} (Zug ideal plastisch) $f=1$.
             \\\textit{Spannungsverteilung als lineare Funktion:} Fliessgrenze an einem Ort überschritten (1. Plastifizierung) aber grösster Teil des Querschnittes noch elastisch $\rightarrow$ Reserve. (Bsp. Biegung bei elastisch ideal-plastisch)
-            \[f=\frac{M_{versagen}}{M_{plastifizierung}}\]
+            \[\boxed{f=\frac{M_{versagen}}{M_{plastifizierung}}}\]
             \begin{center}
                 \includegraphics[width=0.5\linewidth]{04/formfaktoren.png}
             \end{center}
