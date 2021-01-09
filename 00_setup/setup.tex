@@ -31,21 +31,21 @@
 
 
 %get rid of spacing between lists
-\usepackage{enumitem} 
+\usepackage{enumitem}
     \setlist{nolistsep}
 
 %custom header with title & authors
-\usepackage{fancyhdr} 
+\usepackage{fancyhdr}
     \pagestyle{fancy}
     \fancyhf{}
-    \rhead{Joshua Näf, \textit{naefjo@ethz.ch}; Franz Bühlmann, \textit{franzbu@ethz.ch}}
-    \lhead{\textbf{Dimensionieren I HS19, Prof. Dr. E. Mazza}}
+    \rhead{Alexander Bocken, \textit{abocken@ethz.ch}}
+    \lhead{\textbf{Dimensionieren I HS20, Prof. Dr. E. Mazza}}
     \setlength{\headsep}{1mm}
     \chead{\textbf{\thepage}}
 
 
 %imagepackage
-\usepackage{graphicx} 
+\usepackage{graphicx}
     \graphicspath{ {./images/} }
 
 \usepackage{parskip} %Einzug aus, Absatzabstand ein
@@ -81,8 +81,8 @@
 		\textbf{#1}
 	\end{tcolorbox}
 }
-	
-% Subsection	
+
+% Subsection
 \renewcommand{\subsection}[1]{
 	\begin{tcolorbox}[
 			arc=0mm,
@@ -100,12 +100,12 @@
 			before skip = 0.5mm,
 			leftright skip = -0.5mm,
 			after skip = 0.5 mm]
-			
+
 		\small \textbf{#1:}
 	\end{tcolorbox}
 }
-	
-% Subsubsection	
+
+% Subsubsection
 \renewcommand{\subsubsection}[1]{
 	\begin{tcolorbox}[
 			arc=0mm,
@@ -123,7 +123,7 @@
 			before skip = 0.5mm,
 			leftright skip = -0.5mm,
 			after skip = 0.5 mm]
-			
+
 		\small \textbf{#1:}
 	\end{tcolorbox}
 }
