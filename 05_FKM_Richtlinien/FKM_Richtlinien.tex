@@ -1,7 +1,7 @@
 \vspace{-2mm}
 \section{FKM Richtlinien}{}
     \subsection{Auslastungsgrad}
-     
+
         \subsubsection{Definitionen}
             \begin{enumerate}[noitemsep]
                 \item $\sigma_{v}$: Vergleichsspannung im Nachweispunkt
@@ -9,7 +9,7 @@
                 \item $J_{ges}$: Sicherheitsfaktor (Gesamtsicherheitsfaktor)
             \end{enumerate}
             \vspace{-1mm}\[\boxed{a_{SK} = \frac{\sigma_{v}}{\sigma_{sk}/J_{ges}}}\]
-    
+
         \subsubsection{Mehrachsigkeit}
             Falls $h > 1.33$ zusätzlicher Nachweis erforderlich! (Bruchdehnung und ev. maximale äquivalente Spannung bei starker Mehrachsigkeit kleiner)
             \vspace{-2mm}\[\boxed{h = \frac{\frac{1}{3} \textrm{Spur}[T]}{\sigma_{\textrm{v. Mises}}}} \quad \textrm{[T]: Spannungstensor}\]
@@ -19,7 +19,7 @@
             \[R_P = K_{d,P}\cdot K_A\cdot R_{P,N};\qquad n_{\textrm{pl}}=\textrm{min} \left( \sqrt{ \frac{E\cdot\varepsilon_{\textrm{ertr}}}{R_p}};K_p \right)\]
             Hom. Spannungsverteilung: $n_{\textrm{pl}}=1$ (Keine Reserve)
             \vspace{-1mm}
-            \[\textrm{pl. Formzahl}: \boxed{K_p  = \frac{\textrm{Last beim Versagen 
+            \[\textrm{pl. Formzahl}: \boxed{K_p  = \frac{\textrm{Last beim Versagen
             (zB: }\sigma_{\textrm{v. Mises}}^{vgl}=R_e\textrm{)}}{\textrm{Last bei erster Plast}}}\]
             vollpl.: aus FE; el. Grenzl.: wenn $\sigma_v = R_p$ erreicht.
         \subsubsection{Sicherheitsfaktor $J_{\textrm{ges}}$}
@@ -28,7 +28,7 @@
         \begin{center}
             \includegraphics[width=0.8\linewidth]{05/Sicherheitsfaktoren.png}
         \end{center}
-    
+
     \subsection{Bsp}
         \subsubsection{plastische Formzahl an einem Druckkessel mit Loch}
             \begin{enumerate}
@@ -37,21 +37,14 @@
                 \item Versagenslast: $R_e=\sigma_{v.Mises}^{vgl}(\sigma_{rr},\sigma_{\varphi\varphi},\sigma_{zz})=\frac{\sqrt{3}R}{2d}R_e \Leftrightarrow P_{vers}=\frac{2d}{\sqrt{3}R}R_e$
                 \item $K_p=\frac{P_{vers}}{P_{pl}}\approx 2.88$
             \end{enumerate}
-            
+
         \subsubsection{Dimensionieren eines Kessels mit Loch nach FKM}
         \textit{Vorgehen:}
         \begin{enumerate}
             \item $ a_{{SK}} = \frac{\frac{\sigma_v}{\sigma_{{SK}}}}{J_{ges}}  \rightarrow  \sigma_v \cdot J_{ges} < \sigma_{{SK}} $
             \item Wegen Mehrachsigkeit kein weiterer Nachweis nötig
-            $ h = \frac{1}{3} < 1.33$ 
+            $ h = \frac{1}{3} < 1.33$
             \item Bauteilspezifische Materialfestigkeit $ \sigma_{SK} $ berechnen:
             \item Sicherheitsfaktor $J_{ges}$ berechnen
             \item Einsetzen in 1. ergibt $a_{SK}=0.4<1$
         \end{enumerate}
-        
-        
-        
-        
-        
-        
-        
